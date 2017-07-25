@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-25T12:41:51Z" product-name="realer">
+		<header/>
+		<body>
+			<trans-unit id="tx_realer_domain_model_property">
+				<source>Property</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.agent_reference">
+				<source>Agent Reference</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_priority">
+				<source>Has Priority</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.sales_state">
+				<source>Sales State</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.available_for_sale">
+				<source>Available For Sale</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.available_for_rent">
+				<source>Available For Rent</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.available_for_business_transfer">
+				<source>Available For Business Transfer</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.price_before">
+				<source>Price Before</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.price_after">
+				<source>Price After</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.insurance_value">
+				<source>Insurance Value</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.running_cost">
+				<source>Running Cost</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.introduction">
+				<source>Introduction</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.location_type">
+				<source>Location Type</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.zone">
+				<source>Zone</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.orientation">
+				<source>Orientation</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.object_type">
+				<source>Object Type</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.house_type">
+				<source>House Type</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.flat_type">
+				<source>Flat Type</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.land_type">
+				<source>Land Type</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.classification">
+				<source>Classification</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.room_count">
+				<source>Room Count</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.is_new">
+				<source>Is New</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.property_age">
+				<source>Property Age</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.construction_area">
+				<source>Construction Area</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.useful_area">
+				<source>Useful Area</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.description">
+				<source>Description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

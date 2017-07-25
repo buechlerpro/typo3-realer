@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-25T12:41:51Z" product-name="realer">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="agent_reference.description">
+				<source>agentReference</source>
+			</trans-unit>
+			<trans-unit id="has_priority.description">
+				<source>hasPriority</source>
+			</trans-unit>
+			<trans-unit id="sales_state.description">
+				<source>salesState</source>
+			</trans-unit>
+			<trans-unit id="available_for_sale.description">
+				<source>availableForSale</source>
+			</trans-unit>
+			<trans-unit id="available_for_rent.description">
+				<source>availableForRent</source>
+			</trans-unit>
+			<trans-unit id="available_for_business_transfer.description">
+				<source>availableForBusinessTransfer</source>
+			</trans-unit>
+			<trans-unit id="price_before.description">
+				<source>priceBefore</source>
+			</trans-unit>
+			<trans-unit id="price_after.description">
+				<source>priceAfter</source>
+			</trans-unit>
+			<trans-unit id="insurance_value.description">
+				<source>insuranceValue</source>
+			</trans-unit>
+			<trans-unit id="running_cost.description">
+				<source>runningCost</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="introduction.description">
+				<source>introduction</source>
+			</trans-unit>
+			<trans-unit id="location_type.description">
+				<source>centric/rural</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="zip.description">
+				<source>zip</source>
+			</trans-unit>
+			<trans-unit id="place.description">
+				<source>place</source>
+			</trans-unit>
+			<trans-unit id="zone.description">
+				<source>zone</source>
+			</trans-unit>
+			<trans-unit id="region.description">
+				<source>region</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>country</source>
+			</trans-unit>
+			<trans-unit id="latitude.description">
+				<source>latitude</source>
+			</trans-unit>
+			<trans-unit id="longitude.description">
+				<source>longitude</source>
+			</trans-unit>
+			<trans-unit id="orientation.description">
+				<source>orientation</source>
+			</trans-unit>
+			<trans-unit id="object_type.description">
+				<source>objectType</source>
+			</trans-unit>
+			<trans-unit id="house_type.description">
+				<source>houseType</source>
+			</trans-unit>
+			<trans-unit id="flat_type.description">
+				<source>flatType</source>
+			</trans-unit>
+			<trans-unit id="land_type.description">
+				<source>landType</source>
+			</trans-unit>
+			<trans-unit id="classification.description">
+				<source>how many stars?</source>
+			</trans-unit>
+			<trans-unit id="room_count.description">
+				<source>roomCount</source>
+			</trans-unit>
+			<trans-unit id="is_new.description">
+				<source>isNew</source>
+			</trans-unit>
+			<trans-unit id="property_age.description">
+				<source>propertyAge</source>
+			</trans-unit>
+			<trans-unit id="construction_area.description">
+				<source>constructionArea</source>
+			</trans-unit>
+			<trans-unit id="useful_area.description">
+				<source>usefulArea</source>
+			</trans-unit>
+			<trans-unit id="state.description">
+				<source>state</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

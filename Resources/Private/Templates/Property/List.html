@@ -1,0 +1,107 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Property</h1>
+
+<f:flashMessages />
+
+<table  class="tx_realer" >
+	<tr>
+		<th><f:translate key="tx_realer_domain_model_property.title" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.agent_reference" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.has_priority" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.sales_state" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.available_for_sale" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.available_for_rent" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.available_for_business_transfer" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.price_before" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.price_after" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.insurance_value" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.running_cost" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.images" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.introduction" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.location_type" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.address" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.zip" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.place" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.zone" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.region" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.country" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.latitude" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.longitude" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.orientation" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.object_type" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.house_type" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.flat_type" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.land_type" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.classification" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.room_count" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.is_new" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.property_age" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.construction_area" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.useful_area" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.state" /></th>
+		<th><f:translate key="tx_realer_domain_model_property.description" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{properties}" as="property">
+		<tr>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.title}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.agentReference}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.hasPriority}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.salesState}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.availableForSale}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.availableForRent}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.availableForBusinessTransfer}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.priceBefore}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.priceAfter}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.insuranceValue}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.runningCost}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.images.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.introduction}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.locationType}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.address}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.zip}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.place}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.zone}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.region}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.country}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.latitude}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.longitude}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.orientation}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.objectType}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.houseType}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.flatType}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.landType}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.classification}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.roomCount}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.isNew}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.propertyAge}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.constructionArea}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.usefulArea}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.state}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{property : property}"> {property.description}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{property : property}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{property : property}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Property</f:link.action>
+</f:section>
+</html>

@@ -1,0 +1,16 @@
+
+
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      Synac\Realer\Domain\Model\Property {
+        mapping {
+          
+        }
+      }
+
+    }
+  }
+}
