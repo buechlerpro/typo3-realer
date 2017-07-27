@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-27T14:41:22Z" product-name="realer">
+		<header/>
+		<body>
+			<trans-unit id="selectBox.pleaseSelect">
+				<source>Please select</source>
+			</trans-unit>
+			<trans-unit id="property.tabs.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="property.tabs.detail">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="property.sales_state.1">
+				<source>For sale</source>
+			</trans-unit>
+			<trans-unit id="property.sales_state.2">
+				<source>Sold</source>
+			</trans-unit>
+			<trans-unit id="property.location_type.1">
+				<source>Centric</source>
+			</trans-unit>
+			<trans-unit id="property.location_type.2">
+				<source>Peripheric</source>
+			</trans-unit>
+			<trans-unit id="property.location_type.3">
+				<source>Rural</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.1">
+				<source>House</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.2">
+				<source>Flat</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.3">
+				<source>Flat duplex</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.4">
+				<source>Comercial venues</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.5">
+				<source>Terrains / Solar</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.6">
+				<source>Singular house</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.7">
+				<source>Country house</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.8">
+				<source>Industrial room</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.9">
+				<source>Garage</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.10">
+				<source>Office</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.11">
+				<source>Business</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.12">
+				<source>Bungalows</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.13">
+				<source>Rustic estate</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.14">
+				<source>Building promotion</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.15">
+				<source>Hotel</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.16">
+				<source>Hotel/Restaurant</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.17">
+				<source>Restaurant</source>
+			</trans-unit>
+			<trans-unit id="property.object_type.18">
+				<source>Business property</source>
+			</trans-unit>
+			<trans-unit id="property.house_type.1">
+				<source>Rustic</source>
+			</trans-unit>
+			<trans-unit id="property.house_type.2">
+				<source>Row house</source>
+			</trans-unit>
+			<trans-unit id="property.house_type.3">
+				<source>Individual</source>
+			</trans-unit>
+			<trans-unit id="property.house_type.4">
+				<source>Duplex</source>
+			</trans-unit>
+			<trans-unit id="property.house_type.5">
+				<source>House (to reform)</source>
+			</trans-unit>
+			<trans-unit id="property.house_type.6">
+				<source>Structure</source>
+			</trans-unit>
+			<trans-unit id="property.house_type.7">
+				<source>Others</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type.1">
+				<source>Flat</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type.2">
+				<source>Apartment</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type.3">
+				<source>Studio</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type.4">
+				<source>Attic</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type.5">
+				<source>Mansard</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type.6">
+				<source>Loft</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type.7">
+				<source>Others</source>
+			</trans-unit>
+			<trans-unit id="property.land_type.1">
+				<source>Industrial</source>
+			</trans-unit>
+			<trans-unit id="property.land_type.2">
+				<source>Dotacional</source>
+			</trans-unit>
+			<trans-unit id="property.land_type.3">
+				<source>Others</source>
+			</trans-unit>
+			<trans-unit id="property.classification.1">
+				<source>*</source>
+			</trans-unit>
+			<trans-unit id="property.classification.2">
+				<source>**</source>
+			</trans-unit>
+			<trans-unit id="property.classification.3">
+				<source>***</source>
+			</trans-unit>
+			<trans-unit id="property.classification.4">
+				<source>****</source>
+			</trans-unit>
+			<trans-unit id="property.classification.5">
+				<source>*****</source>
+			</trans-unit>
+			<trans-unit id="property.state.1">
+				<source>In construction</source>
+			</trans-unit>
+			<trans-unit id="property.state.2">
+				<source>Constructed</source>
+			</trans-unit>
+			<trans-unit id="property.state.3">
+				<source>Renovated</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
