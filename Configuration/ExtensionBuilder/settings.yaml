@@ -52,7 +52,12 @@ overwriteSettings:
 
   Resources:
     Private:
-      #Language: merge
+      Language: merge
+      Templates:
+        List.html: keep
+
+  Resources:
+    Private:
       Templates:
         List.html: keep
 

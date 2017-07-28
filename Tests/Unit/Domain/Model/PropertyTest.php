@@ -231,24 +231,24 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getPriceAfterReturnsInitialValueForFloat()
+    public function getPriceReturnsInitialValueForFloat()
     {
         self::assertSame(
             0.0,
-            $this->subject->getPriceAfter()
+            $this->subject->getPrice()
         );
     }
 
     /**
      * @test
      */
-    public function setPriceAfterForFloatSetsPriceAfter()
+    public function setPriceForFloatSetsPrice()
     {
-        $this->subject->setPriceAfter(3.14159265);
+        $this->subject->setPrice(3.14159265);
 
         self::assertAttributeEquals(
             3.14159265,
-            'priceAfter',
+            'price',
             $this->subject,
             '',
             0.000000001
@@ -713,58 +713,6 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getClassificationReturnsInitialValueForInt()
-    {
-        self::assertSame(
-            0,
-            $this->subject->getClassification()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setClassificationForIntSetsClassification()
-    {
-        $this->subject->setClassification(12);
-
-        self::assertAttributeEquals(
-            12,
-            'classification',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getRoomCountReturnsInitialValueForFloat()
-    {
-        self::assertSame(
-            0.0,
-            $this->subject->getRoomCount()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setRoomCountForFloatSetsRoomCount()
-    {
-        $this->subject->setRoomCount(3.14159265);
-
-        self::assertAttributeEquals(
-            3.14159265,
-            'roomCount',
-            $this->subject,
-            '',
-            0.000000001
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getIsNewReturnsInitialValueForBool()
     {
         self::assertSame(
@@ -867,6 +815,31 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
+    public function getClassificationReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getClassification()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setClassificationForIntSetsClassification()
+    {
+        $this->subject->setClassification(12);
+
+        self::assertAttributeEquals(
+            12,
+            'classification',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getStateReturnsInitialValueForInt()
     {
         self::assertSame(
@@ -910,6 +883,308 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         self::assertAttributeEquals(
             'Conceived at T3CON10',
             'description',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getRoomCountReturnsInitialValueForFloat()
+    {
+        self::assertSame(
+            0.0,
+            $this->subject->getRoomCount()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setRoomCountForFloatSetsRoomCount()
+    {
+        $this->subject->setRoomCount(3.14159265);
+
+        self::assertAttributeEquals(
+            3.14159265,
+            'roomCount',
+            $this->subject,
+            '',
+            0.000000001
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getSleepingRoomCountReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getSleepingRoomCount()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setSleepingRoomCountForIntSetsSleepingRoomCount()
+    {
+        $this->subject->setSleepingRoomCount(12);
+
+        self::assertAttributeEquals(
+            12,
+            'sleepingRoomCount',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasHallReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasHall()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasHallForBoolSetsHasHall()
+    {
+        $this->subject->setHasHall(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasHall',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasCellarReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasCellar()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasCellarForBoolSetsHasCellar()
+    {
+        $this->subject->setHasCellar(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasCellar',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasStorageReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasStorage()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasStorageForBoolSetsHasStorage()
+    {
+        $this->subject->setHasStorage(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasStorage',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasBalconyReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasBalcony()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasBalconyForBoolSetsHasBalcony()
+    {
+        $this->subject->setHasBalcony(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasBalcony',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasElevatorReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasElevator()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasElevatorForBoolSetsHasElevator()
+    {
+        $this->subject->setHasElevator(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasElevator',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasGarageReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasGarage()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasGarageForBoolSetsHasGarage()
+    {
+        $this->subject->setHasGarage(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasGarage',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getGarageCountReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getGarageCount()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setGarageCountForIntSetsGarageCount()
+    {
+        $this->subject->setGarageCount(12);
+
+        self::assertAttributeEquals(
+            12,
+            'garageCount',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasChimneyReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasChimney()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasChimneyForBoolSetsHasChimney()
+    {
+        $this->subject->setHasChimney(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasChimney',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasPoolReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasPool()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasPoolForBoolSetsHasPool()
+    {
+        $this->subject->setHasPool(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasPool',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasBarbecueReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasBarbecue()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasBarbecueForBoolSetsHasBarbecue()
+    {
+        $this->subject->setHasBarbecue(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasBarbecue',
             $this->subject
         );
     }

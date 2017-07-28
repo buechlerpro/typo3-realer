@@ -74,11 +74,11 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $priceBefore = 0.0;
 
     /**
-     * priceAfter
+     * price
      * 
      * @var float
      */
-    protected $priceAfter = 0.0;
+    protected $price = 0.0;
 
     /**
      * insuranceValue
@@ -215,13 +215,6 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $classification = 0;
 
     /**
-     * roomCount
-     * 
-     * @var float
-     */
-    protected $roomCount = 0.0;
-
-    /**
      * isNew
      * 
      * @var bool
@@ -262,6 +255,90 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $description = '';
+
+    /**
+     * roomCount
+     * 
+     * @var float
+     */
+    protected $roomCount = 0.0;
+
+    /**
+     * sleepingRoomCount
+     * 
+     * @var int
+     */
+    protected $sleepingRoomCount = 0;
+
+    /**
+     * Mark if object has a hall
+     * 
+     * @var bool
+     */
+    protected $hasHall = false;
+
+    /**
+     * Mark if object has a cellar
+     * 
+     * @var bool
+     */
+    protected $hasCellar = false;
+
+    /**
+     * Mark if object has a storage room
+     * 
+     * @var bool
+     */
+    protected $hasStorage = false;
+
+    /**
+     * Mark if object has a balcony
+     * 
+     * @var bool
+     */
+    protected $hasBalcony = false;
+
+    /**
+     * Mark if object has an elevator
+     * 
+     * @var bool
+     */
+    protected $hasElevator = false;
+
+    /**
+     * Mark if object has at least one garage
+     * 
+     * @var bool
+     */
+    protected $hasGarage = false;
+
+    /**
+     * Cuantity of garages
+     * 
+     * @var int
+     */
+    protected $garageCount = 0;
+
+    /**
+     * Mark if object has a chimney
+     * 
+     * @var bool
+     */
+    protected $hasChimney = false;
+
+    /**
+     * Mark if object has a pool
+     * 
+     * @var bool
+     */
+    protected $hasPool = false;
+
+    /**
+     * Mark if object has a barbecue
+     * 
+     * @var bool
+     */
+    protected $hasBarbecue = false;
 
     /**
      * Returns the title
@@ -469,27 +546,6 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setPriceBefore($priceBefore)
     {
         $this->priceBefore = $priceBefore;
-    }
-
-    /**
-     * Returns the priceAfter
-     * 
-     * @return float $priceAfter
-     */
-    public function getPriceAfter()
-    {
-        return $this->priceAfter;
-    }
-
-    /**
-     * Sets the priceAfter
-     * 
-     * @param float $priceAfter
-     * @return void
-     */
-    public function setPriceAfter($priceAfter)
-    {
-        $this->priceAfter = $priceAfter;
     }
 
     /**
@@ -1007,6 +1063,48 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Returns the state
+     * 
+     * @return int state
+     */
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    /**
+     * Sets the state
+     * 
+     * @param int $state
+     * @return void
+     */
+    public function setState($state)
+    {
+        $this->state = $state;
+    }
+
+    /**
+     * Returns the price
+     * 
+     * @return float price
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Sets the price
+     * 
+     * @param float $price
+     * @return void
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
      * Returns the roomCount
      * 
      * @return float $roomCount
@@ -1028,23 +1126,323 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the state
+     * Returns the sleepingRoomCount
      * 
-     * @return int state
+     * @return int $sleepingRoomCount
      */
-    public function getState()
+    public function getSleepingRoomCount()
     {
-        return $this->state;
+        return $this->sleepingRoomCount;
     }
 
     /**
-     * Sets the state
+     * Sets the sleepingRoomCount
      * 
-     * @param int $state
+     * @param int $sleepingRoomCount
      * @return void
      */
-    public function setState($state)
+    public function setSleepingRoomCount($sleepingRoomCount)
     {
-        $this->state = $state;
+        $this->sleepingRoomCount = $sleepingRoomCount;
+    }
+
+    /**
+     * Returns the hasHall
+     * 
+     * @return bool $hasHall
+     */
+    public function getHasHall()
+    {
+        return $this->hasHall;
+    }
+
+    /**
+     * Sets the hasHall
+     * 
+     * @param bool $hasHall
+     * @return void
+     */
+    public function setHasHall($hasHall)
+    {
+        $this->hasHall = $hasHall;
+    }
+
+    /**
+     * Returns the boolean state of hasHall
+     * 
+     * @return bool
+     */
+    public function isHasHall()
+    {
+        return $this->hasHall;
+    }
+
+    /**
+     * Returns the hasCellar
+     * 
+     * @return bool $hasCellar
+     */
+    public function getHasCellar()
+    {
+        return $this->hasCellar;
+    }
+
+    /**
+     * Sets the hasCellar
+     * 
+     * @param bool $hasCellar
+     * @return void
+     */
+    public function setHasCellar($hasCellar)
+    {
+        $this->hasCellar = $hasCellar;
+    }
+
+    /**
+     * Returns the boolean state of hasCellar
+     * 
+     * @return bool
+     */
+    public function isHasCellar()
+    {
+        return $this->hasCellar;
+    }
+
+    /**
+     * Returns the hasStorage
+     * 
+     * @return bool $hasStorage
+     */
+    public function getHasStorage()
+    {
+        return $this->hasStorage;
+    }
+
+    /**
+     * Sets the hasStorage
+     * 
+     * @param bool $hasStorage
+     * @return void
+     */
+    public function setHasStorage($hasStorage)
+    {
+        $this->hasStorage = $hasStorage;
+    }
+
+    /**
+     * Returns the boolean state of hasStorage
+     * 
+     * @return bool
+     */
+    public function isHasStorage()
+    {
+        return $this->hasStorage;
+    }
+
+    /**
+     * Returns the hasBalcony
+     * 
+     * @return bool $hasBalcony
+     */
+    public function getHasBalcony()
+    {
+        return $this->hasBalcony;
+    }
+
+    /**
+     * Sets the hasBalcony
+     * 
+     * @param bool $hasBalcony
+     * @return void
+     */
+    public function setHasBalcony($hasBalcony)
+    {
+        $this->hasBalcony = $hasBalcony;
+    }
+
+    /**
+     * Returns the boolean state of hasBalcony
+     * 
+     * @return bool
+     */
+    public function isHasBalcony()
+    {
+        return $this->hasBalcony;
+    }
+
+    /**
+     * Returns the hasElevator
+     * 
+     * @return bool $hasElevator
+     */
+    public function getHasElevator()
+    {
+        return $this->hasElevator;
+    }
+
+    /**
+     * Sets the hasElevator
+     * 
+     * @param bool $hasElevator
+     * @return void
+     */
+    public function setHasElevator($hasElevator)
+    {
+        $this->hasElevator = $hasElevator;
+    }
+
+    /**
+     * Returns the boolean state of hasElevator
+     * 
+     * @return bool
+     */
+    public function isHasElevator()
+    {
+        return $this->hasElevator;
+    }
+
+    /**
+     * Returns the hasGarage
+     * 
+     * @return bool $hasGarage
+     */
+    public function getHasGarage()
+    {
+        return $this->hasGarage;
+    }
+
+    /**
+     * Sets the hasGarage
+     * 
+     * @param bool $hasGarage
+     * @return void
+     */
+    public function setHasGarage($hasGarage)
+    {
+        $this->hasGarage = $hasGarage;
+    }
+
+    /**
+     * Returns the boolean state of hasGarage
+     * 
+     * @return bool
+     */
+    public function isHasGarage()
+    {
+        return $this->hasGarage;
+    }
+
+    /**
+     * Returns the garageCount
+     * 
+     * @return int $garageCount
+     */
+    public function getGarageCount()
+    {
+        return $this->garageCount;
+    }
+
+    /**
+     * Sets the garageCount
+     * 
+     * @param int $garageCount
+     * @return void
+     */
+    public function setGarageCount($garageCount)
+    {
+        $this->garageCount = $garageCount;
+    }
+
+    /**
+     * Returns the hasChimney
+     * 
+     * @return bool $hasChimney
+     */
+    public function getHasChimney()
+    {
+        return $this->hasChimney;
+    }
+
+    /**
+     * Sets the hasChimney
+     * 
+     * @param bool $hasChimney
+     * @return void
+     */
+    public function setHasChimney($hasChimney)
+    {
+        $this->hasChimney = $hasChimney;
+    }
+
+    /**
+     * Returns the boolean state of hasChimney
+     * 
+     * @return bool
+     */
+    public function isHasChimney()
+    {
+        return $this->hasChimney;
+    }
+
+    /**
+     * Returns the hasPool
+     * 
+     * @return bool $hasPool
+     */
+    public function getHasPool()
+    {
+        return $this->hasPool;
+    }
+
+    /**
+     * Sets the hasPool
+     * 
+     * @param bool $hasPool
+     * @return void
+     */
+    public function setHasPool($hasPool)
+    {
+        $this->hasPool = $hasPool;
+    }
+
+    /**
+     * Returns the boolean state of hasPool
+     * 
+     * @return bool
+     */
+    public function isHasPool()
+    {
+        return $this->hasPool;
+    }
+
+    /**
+     * Returns the hasBarbecue
+     * 
+     * @return bool $hasBarbecue
+     */
+    public function getHasBarbecue()
+    {
+        return $this->hasBarbecue;
+    }
+
+    /**
+     * Sets the hasBarbecue
+     * 
+     * @param bool $hasBarbecue
+     * @return void
+     */
+    public function setHasBarbecue($hasBarbecue)
+    {
+        $this->hasBarbecue = $hasBarbecue;
+    }
+
+    /**
+     * Returns the boolean state of hasBarbecue
+     * 
+     * @return bool
+     */
+    public function isHasBarbecue()
+    {
+        return $this->hasBarbecue;
     }
 }

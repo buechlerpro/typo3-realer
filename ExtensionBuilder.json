@@ -119,7 +119,7 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "priceAfter",
+                            "propertyName": "price",
                             "propertyType": "Float",
                             "uid": "194721716393"
                         },
@@ -306,26 +306,6 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "how many stars?",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "classification",
-                            "propertyType": "Select",
-                            "uid": "896133910848"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "roomCount",
-                            "propertyType": "Float",
-                            "uid": "214740211126"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
@@ -366,6 +346,16 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
+                            "propertyDescription": "how many stars?",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "classification",
+                            "propertyType": "Select",
+                            "uid": "896133910848"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
@@ -382,6 +372,126 @@
                             "propertyName": "description",
                             "propertyType": "RichText",
                             "uid": "368738016340"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "roomCount",
+                            "propertyType": "Float",
+                            "uid": "83134758260"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "sleepingRoomCount",
+                            "propertyType": "Integer",
+                            "uid": "1309989668025"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has a hall",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasHall",
+                            "propertyType": "Boolean",
+                            "uid": "1112322176107"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has a cellar",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasCellar",
+                            "propertyType": "Boolean",
+                            "uid": "1013593132370"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has a storage room",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasStorage",
+                            "propertyType": "Boolean",
+                            "uid": "607237483134"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has a balcony",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasBalcony",
+                            "propertyType": "Boolean",
+                            "uid": "1321932591323"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has an elevator",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasElevator",
+                            "propertyType": "Boolean",
+                            "uid": "1386278988270"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has at least one garage",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasGarage",
+                            "propertyType": "Boolean",
+                            "uid": "937756718904"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Cuantity of garages",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "garageCount",
+                            "propertyType": "Integer",
+                            "uid": "924907850572"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has a chimney",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasChimney",
+                            "propertyType": "Boolean",
+                            "uid": "263104134530"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has a pool",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasPool",
+                            "propertyType": "Boolean",
+                            "uid": "1161613237611"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has a barbecue",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasBarbecue",
+                            "propertyType": "Boolean",
+                            "uid": "1411982649277"
                         }
                     ]
                 },
@@ -433,7 +543,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2017-07-25 12:41",
+        "last_modified": "2017-07-28 05:14",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

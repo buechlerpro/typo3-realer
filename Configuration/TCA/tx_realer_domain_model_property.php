@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title,agent_reference,has_priority,sales_state,available_for_sale,available_for_rent,available_for_business_transfer,price_before,price_after,insurance_value,running_cost,images,introduction,location_type,address,zip,place,zone,region,country,latitude,longitude,orientation,object_type,house_type,flat_type,land_type,classification,room_count,is_new,property_age,construction_area,useful_area,state,description',
+        'searchFields' => 'title,agent_reference,has_priority,sales_state,available_for_sale,available_for_rent,available_for_business_transfer,price_before,price,insurance_value,running_cost,images,introduction,location_type,address,zip,place,zone,region,country,latitude,longitude,orientation,object_type,house_type,flat_type,land_type,is_new,property_age,construction_area,useful_area,classification,state,description,room_count,sleeping_room_count,has_hall,has_cellar,has_storage,has_balcony,has_elevator,has_garage,garage_count,has_chimney,has_pool,has_barbecue',
         'iconfile' => 'EXT:realer/Resources/Public/Icons/tx_realer_domain_model_property.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price_after, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, object_type, house_type, flat_type, land_type, classification, room_count, is_new, property_age, construction_area, useful_area, state, description',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, object_type, house_type, flat_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price_after, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, object_type, house_type, flat_type, land_type, classification, room_count, is_new, property_age, construction_area, useful_area, state, description, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, object_type, house_type, flat_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -203,9 +203,9 @@ return [
                 'eval' => 'double2'
             ]
         ],
-        'price_after' => [
+        'price' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.price_after',
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.price',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -271,7 +271,7 @@ return [
                             --palette--;;filePalette'
                         ]
                     ],
-                    'maxitems' => 20
+                    'maxitems' => 1
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
@@ -438,29 +438,6 @@ return [
                 'eval' => ''
             ],
         ],
-        'classification' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.classification',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['-- Label --', 0],
-                ],
-                'size' => 1,
-                'maxitems' => 1,
-                'eval' => ''
-            ],
-        ],
-        'room_count' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.room_count',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'double2'
-            ]
-        ],
         'is_new' => [
             'exclude' => true,
             'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.is_new',
@@ -501,6 +478,20 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'classification' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.classification',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['-- Label --', 0],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
+        ],
         'state' => [
             'exclude' => true,
             'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.state',
@@ -525,6 +516,150 @@ return [
                 'eval' => 'trim',
             ],
             'defaultExtras' => 'richtext:rte_transform'
+        ],
+        'room_count' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.room_count',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'double2'
+            ]
+        ],
+        'sleeping_room_count' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.sleeping_room_count',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'has_hall' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_hall',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'has_cellar' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_cellar',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'has_storage' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_storage',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'has_balcony' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_balcony',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'has_elevator' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_elevator',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'has_garage' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_garage',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'garage_count' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.garage_count',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'has_chimney' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_chimney',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'has_pool' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_pool',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
+        'has_barbecue' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_barbecue',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
         ],
     
     ],

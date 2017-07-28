@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-25T12:41:51Z" product-name="realer">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-28T17:14:02Z" product-name="realer">
 		<header/>
 		<body>
 			<trans-unit id="tx_realer_domain_model_property">
@@ -30,8 +30,8 @@
 			<trans-unit id="tx_realer_domain_model_property.price_before">
 				<source>Price Before</source>
 			</trans-unit>
-			<trans-unit id="tx_realer_domain_model_property.price_after">
-				<source>Price After</source>
+			<trans-unit id="tx_realer_domain_model_property.price">
+				<source>Price</source>
 			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.insurance_value">
 				<source>Insurance Value</source>
@@ -87,12 +87,6 @@
 			<trans-unit id="tx_realer_domain_model_property.land_type">
 				<source>Land Type</source>
 			</trans-unit>
-			<trans-unit id="tx_realer_domain_model_property.classification">
-				<source>Classification</source>
-			</trans-unit>
-			<trans-unit id="tx_realer_domain_model_property.room_count">
-				<source>Room Count</source>
-			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.is_new">
 				<source>Is New</source>
 			</trans-unit>
@@ -105,11 +99,50 @@
 			<trans-unit id="tx_realer_domain_model_property.useful_area">
 				<source>Useful Area</source>
 			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.classification">
+				<source>Classification</source>
+			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.state">
 				<source>State</source>
 			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.description">
 				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.room_count">
+				<source>Room Count</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.sleeping_room_count">
+				<source>Sleeping Room Count</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_hall">
+				<source>Has Hall</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_cellar">
+				<source>Has Cellar</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_storage">
+				<source>Has Storage</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_balcony">
+				<source>Has Balcony</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_elevator">
+				<source>Has Elevator</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_garage">
+				<source>Has Garage</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.garage_count">
+				<source>Garage Count</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_chimney">
+				<source>Has Chimney</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_pool">
+				<source>Has Pool</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_barbecue">
+				<source>Has Barbecue</source>
 			</trans-unit>
 		</body>
 	</file>
