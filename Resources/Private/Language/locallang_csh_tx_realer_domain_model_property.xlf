@@ -4,109 +4,109 @@
 		<header/>
 		<body>
 			<trans-unit id="title.description">
-				<source>title</source>
+				<source>Title from the real estate property</source>
 			</trans-unit>
 			<trans-unit id="agent_reference.description">
-				<source>agentReference</source>
+				<source>Agency reference number for object</source>
 			</trans-unit>
 			<trans-unit id="has_priority.description">
-				<source>hasPriority</source>
+				<source>If an object has priority it will be shown first</source>
 			</trans-unit>
 			<trans-unit id="sales_state.description">
-				<source>salesState</source>
+				<source>Indicates whether an object has already been sold. Might be a sales stimulation.</source>
 			</trans-unit>
 			<trans-unit id="available_for_sale.description">
-				<source>availableForSale</source>
+				<source>The object can be bought</source>
 			</trans-unit>
 			<trans-unit id="available_for_rent.description">
-				<source>availableForRent</source>
+				<source>The object can be renbted</source>
 			</trans-unit>
 			<trans-unit id="available_for_business_transfer.description">
-				<source>availableForBusinessTransfer</source>
+				<source>A business is associated with the object and the activity might be continued.</source>
 			</trans-unit>
 			<trans-unit id="price_before.description">
-				<source>priceBefore</source>
+				<source>Initial price</source>
 			</trans-unit>
 			<trans-unit id="price_after.description">
-				<source>priceAfter</source>
+				<source>Current price</source>
 			</trans-unit>
 			<trans-unit id="insurance_value.description">
-				<source>insuranceValue</source>
+				<source>The insurance value from the object</source>
 			</trans-unit>
 			<trans-unit id="running_cost.description">
-				<source>runningCost</source>
+				<source>The running costs associated with the object</source>
 			</trans-unit>
 			<trans-unit id="images.description">
-				<source>images</source>
+				<source>Images associated with the object</source>
 			</trans-unit>
 			<trans-unit id="introduction.description">
-				<source>introduction</source>
+				<source>An introduction text for the object</source>
 			</trans-unit>
 			<trans-unit id="location_type.description">
-				<source>centric/rural</source>
+				<source>Where is it located? Centric, rural, etc. ?</source>
 			</trans-unit>
 			<trans-unit id="address.description">
-				<source>address</source>
+				<source>Address</source>
 			</trans-unit>
 			<trans-unit id="zip.description">
-				<source>zip</source>
+				<source>Postal code</source>
 			</trans-unit>
 			<trans-unit id="place.description">
-				<source>place</source>
+				<source>Place, city, village</source>
 			</trans-unit>
 			<trans-unit id="zone.description">
-				<source>zone</source>
+				<source>The zone from the object (e.g. Berner Oberland) </source>
 			</trans-unit>
 			<trans-unit id="region.description">
-				<source>region</source>
+				<source>The region from the object (e.g. Bern)</source>
 			</trans-unit>
 			<trans-unit id="country.description">
-				<source>country</source>
+				<source>Country</source>
 			</trans-unit>
 			<trans-unit id="latitude.description">
-				<source>latitude</source>
+				<source>Latitude</source>
 			</trans-unit>
 			<trans-unit id="longitude.description">
-				<source>longitude</source>
+				<source>Longitude</source>
 			</trans-unit>
 			<trans-unit id="orientation.description">
-				<source>orientation</source>
+				<source>Orientation from the object (e.g. on south hill)</source>
 			</trans-unit>
 			<trans-unit id="object_type.description">
-				<source>objectType</source>
+				<source>Object type</source>
 			</trans-unit>
 			<trans-unit id="house_type.description">
-				<source>houseType</source>
+				<source>House type</source>
 			</trans-unit>
 			<trans-unit id="flat_type.description">
-				<source>flatType</source>
+				<source>Flat type</source>
 			</trans-unit>
 			<trans-unit id="land_type.description">
-				<source>landType</source>
+				<source>Land type</source>
 			</trans-unit>
 			<trans-unit id="classification.description">
-				<source>how many stars?</source>
+				<source>Classification from the object (e.g. how many stars it has)</source>
 			</trans-unit>
 			<trans-unit id="room_count.description">
-				<source>roomCount</source>
+				<source>Room count</source>
 			</trans-unit>
 			<trans-unit id="is_new.description">
-				<source>isNew</source>
+				<source>Indicates whether the object is new</source>
 			</trans-unit>
 			<trans-unit id="property_age.description">
-				<source>propertyAge</source>
+				<source>Age from the object</source>
 			</trans-unit>
 			<trans-unit id="construction_area.description">
-				<source>constructionArea</source>
+				<source>The size from the construction area in m2</source>
 			</trans-unit>
 			<trans-unit id="useful_area.description">
-				<source>usefulArea</source>
+				<source>The useful area in m2</source>
 			</trans-unit>
 			<trans-unit id="state.description">
-				<source>state</source>
+				<source>The state from the object</source>
 			</trans-unit>
 			<trans-unit id="description.description">
-				<source>description</source>
+				<source>Description</source>
 			</trans-unit>
 		</body>
 	</file>

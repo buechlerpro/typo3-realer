@@ -10,15 +10,15 @@ $GLOBALS['TCA']['tx_realer_domain_model_property']['types'] = [
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['columns']['sales_state']['config']['items'] = [
     ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:selectBox.pleaseSelect', 0],
-    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.sales_state.10', 1],
-    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.sales_state.20', 2],
+    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.sales_state.1', 1],
+    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.sales_state.2', 2],
 ];
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['columns']['location_type']['config']['items'] = [
     ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:selectBox.pleaseSelect', 0],
-    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.location_type.10', 10],
-    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.location_type.20', 20],
-    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.location_type.30', 30],
+    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.location_type.1', 1],
+    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.location_type.2', 2],
+    ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.location_type.3', 3],
 ];
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['columns']['object_type']['config']['items'] = [
