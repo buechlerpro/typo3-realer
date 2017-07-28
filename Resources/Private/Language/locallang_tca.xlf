@@ -9,8 +9,11 @@
 			<trans-unit id="property.tabs.location">
 				<source>Location</source>
 			</trans-unit>
-			<trans-unit id="property.tabs.detail">
-				<source>Details</source>
+			<trans-unit id="property.tabs.basic">
+				<source>Basic</source>
+			</trans-unit>
+			<trans-unit id="property.tabs.characteristic">
+				<source>Characteristics</source>
 			</trans-unit>
 			<trans-unit id="property.sales_state.1">
 				<source>For sale</source>
@@ -148,13 +151,43 @@
 				<source>*****</source>
 			</trans-unit>
 			<trans-unit id="property.state.1">
-				<source>In construction</source>
+				<source>Extraordinary</source>
 			</trans-unit>
 			<trans-unit id="property.state.2">
-				<source>Constructed</source>
+				<source>Good</source>
 			</trans-unit>
 			<trans-unit id="property.state.3">
-				<source>Renovated</source>
+				<source>In construction</source>
+			</trans-unit>
+			<trans-unit id="property.state.4">
+				<source>In reform</source>
+			</trans-unit>
+			<trans-unit id="property.state.5">
+				<source>Structure</source>
+			</trans-unit>
+			<trans-unit id="property.state.6">
+				<source>Excelent</source>
+			</trans-unit>
+			<trans-unit id="property.state.7">
+				<source>Bad</source>
+			</trans-unit>
+			<trans-unit id="property.state.8">
+				<source>Very good</source>
+			</trans-unit>
+			<trans-unit id="property.state.9">
+				<source>Reform needed</source>
+			</trans-unit>
+			<trans-unit id="property.state.10">
+				<source>Finish needed</source>
+			</trans-unit>
+			<trans-unit id="property.state.11">
+				<source>Normal</source>
+			</trans-unit>
+			<trans-unit id="property.state.12">
+				<source>Regular</source>
+			</trans-unit>
+			<trans-unit id="property.state.13">
+				<source>Restored</source>
 			</trans-unit>
 		</body>
 	</file>

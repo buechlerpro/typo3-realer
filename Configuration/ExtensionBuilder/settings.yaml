@@ -56,10 +56,6 @@ overwriteSettings:
       Templates:
         List.html: keep
 
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
 
   user_extension.svg: keep
 
