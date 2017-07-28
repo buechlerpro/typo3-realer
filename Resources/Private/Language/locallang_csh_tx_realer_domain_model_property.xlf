@@ -55,7 +55,7 @@
 				<source>Place, city, village</source>
 			</trans-unit>
 			<trans-unit id="zone.description">
-				<source>The zone from the object (e.g. Berner Oberland) </source>
+				<source>The zone from the object</source>
 			</trans-unit>
 			<trans-unit id="region.description">
 				<source>The region from the object (e.g. Bern)</source>
