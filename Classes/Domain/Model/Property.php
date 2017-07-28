@@ -180,6 +180,20 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $orientation = '';
 
     /**
+     * View one has being at the object
+     * 
+     * @var string
+     */
+    protected $view = '';
+
+    /**
+     * Mark if object has some rural zone
+     * 
+     * @var bool
+     */
+    protected $hasRuralZone = false;
+
+    /**
      * objectType
      * 
      * @var int
@@ -187,18 +201,18 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $objectType = 0;
 
     /**
-     * houseType
-     * 
-     * @var int
-     */
-    protected $houseType = 0;
-
-    /**
      * flatType
      * 
      * @var int
      */
     protected $flatType = 0;
+
+    /**
+     * houseType
+     * 
+     * @var int
+     */
+    protected $houseType = 0;
 
     /**
      * landType
@@ -339,20 +353,6 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var bool
      */
     protected $hasBarbecue = false;
-
-    /**
-     * View one has being at the object
-     * 
-     * @var string
-     */
-    protected $view = '';
-
-    /**
-     * Mark if object has some rural zone
-     * 
-     * @var bool
-     */
-    protected $hasRuralZone = false;
 
     /**
      * Returns the title
