@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-25T12:41:51Z" product-name="realer">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-28T19:17:59Z" product-name="realer">
 		<header/>
 		<body>
 			<trans-unit id="title.description">
@@ -72,23 +72,23 @@
 			<trans-unit id="orientation.description">
 				<source>Orientation from the object (e.g. on south hill)</source>
 			</trans-unit>
+			<trans-unit id="view.description">
+				<source>View one has being at the object</source>
+			</trans-unit>
+			<trans-unit id="has_rural_zone.description">
+				<source>Mark if object has some rural zone</source>
+			</trans-unit>
 			<trans-unit id="object_type.description">
 				<source>Object type</source>
-			</trans-unit>
-			<trans-unit id="house_type.description">
-				<source>House type</source>
 			</trans-unit>
 			<trans-unit id="flat_type.description">
 				<source>Flat type</source>
 			</trans-unit>
+			<trans-unit id="house_type.description">
+				<source>House type</source>
+			</trans-unit>
 			<trans-unit id="land_type.description">
 				<source>Land type</source>
-			</trans-unit>
-			<trans-unit id="classification.description">
-				<source>Classification from the object (e.g. how many stars it has)</source>
-			</trans-unit>
-			<trans-unit id="room_count.description">
-				<source>Room count</source>
 			</trans-unit>
 			<trans-unit id="is_new.description">
 				<source>Indicates whether the object is new</source>
@@ -102,6 +102,9 @@
 			<trans-unit id="useful_area.description">
 				<source>The useful area in m2</source>
 			</trans-unit>
+			<trans-unit id="classification.description">
+				<source>Classification from the object</source>
+			</trans-unit>
 			<trans-unit id="state.description">
 				<source>The state from the object</source>
 			</trans-unit>
@@ -109,10 +112,10 @@
 				<source>Description</source>
 			</trans-unit>
 			<trans-unit id="room_count.description">
-				<source>roomCount</source>
+				<source>Quantity of available rooms</source>
 			</trans-unit>
 			<trans-unit id="sleeping_room_count.description">
-				<source>sleepingRoomCount</source>
+				<source>Quantity of sleeping rooms</source>
 			</trans-unit>
 			<trans-unit id="has_hall.description">
 				<source>Mark if object has a hall</source>

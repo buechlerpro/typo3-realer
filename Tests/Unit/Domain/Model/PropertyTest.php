@@ -613,6 +613,56 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
+    public function getViewReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getView()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setViewForStringSetsView()
+    {
+        $this->subject->setView('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'view',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHasRuralZoneReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getHasRuralZone()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHasRuralZoneForBoolSetsHasRuralZone()
+    {
+        $this->subject->setHasRuralZone(true);
+
+        self::assertAttributeEquals(
+            true,
+            'hasRuralZone',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getObjectTypeReturnsInitialValueForInt()
     {
         self::assertSame(
@@ -638,31 +688,6 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getHouseTypeReturnsInitialValueForInt()
-    {
-        self::assertSame(
-            0,
-            $this->subject->getHouseType()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setHouseTypeForIntSetsHouseType()
-    {
-        $this->subject->setHouseType(12);
-
-        self::assertAttributeEquals(
-            12,
-            'houseType',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getFlatTypeReturnsInitialValueForInt()
     {
         self::assertSame(
@@ -681,6 +706,31 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         self::assertAttributeEquals(
             12,
             'flatType',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getHouseTypeReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getHouseType()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setHouseTypeForIntSetsHouseType()
+    {
+        $this->subject->setHouseType(12);
+
+        self::assertAttributeEquals(
+            12,
+            'houseType',
             $this->subject
         );
     }

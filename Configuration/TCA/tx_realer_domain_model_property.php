@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title,agent_reference,has_priority,sales_state,available_for_sale,available_for_rent,available_for_business_transfer,price_before,price,insurance_value,running_cost,images,introduction,location_type,address,zip,place,zone,region,country,latitude,longitude,orientation,object_type,house_type,flat_type,land_type,is_new,property_age,construction_area,useful_area,classification,state,description,room_count,sleeping_room_count,has_hall,has_cellar,has_storage,has_balcony,has_elevator,has_garage,garage_count,has_chimney,has_pool,has_barbecue',
+        'searchFields' => 'title,agent_reference,has_priority,sales_state,available_for_sale,available_for_rent,available_for_business_transfer,price_before,price,insurance_value,running_cost,images,introduction,location_type,address,zip,place,zone,region,country,latitude,longitude,orientation,view,has_rural_zone,object_type,flat_type,house_type,land_type,is_new,property_age,construction_area,useful_area,classification,state,description,room_count,sleeping_room_count,has_hall,has_cellar,has_storage,has_balcony,has_elevator,has_garage,garage_count,has_chimney,has_pool,has_barbecue',
         'iconfile' => 'EXT:realer/Resources/Public/Icons/tx_realer_domain_model_property.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, object_type, house_type, flat_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, view, has_rural_zone, object_type, flat_type, house_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, object_type, house_type, flat_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, view, has_rural_zone, object_type, flat_type, house_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -382,6 +382,29 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'view' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.view',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim'
+            ]
+        ],
+        'has_rural_zone' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.has_rural_zone',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 0,
+            ]
+        ],
         'object_type' => [
             'exclude' => true,
             'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.object_type',
@@ -396,9 +419,9 @@ return [
                 'eval' => ''
             ],
         ],
-        'house_type' => [
+        'flat_type' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.house_type',
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.flat_type',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -410,9 +433,9 @@ return [
                 'eval' => ''
             ],
         ],
-        'flat_type' => [
+        'house_type' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.flat_type',
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.house_type',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',

@@ -266,6 +266,26 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
+                            "propertyDescription": "View one has being at the object",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "view",
+                            "propertyType": "Text",
+                            "uid": "209547043381"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Mark if object has some rural zone",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hasRuralZone",
+                            "propertyType": "Boolean",
+                            "uid": "615060649183"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
@@ -279,9 +299,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "houseType",
+                            "propertyName": "flatType",
                             "propertyType": "Select",
-                            "uid": "1334937916484"
+                            "uid": "1230350858230"
                         },
                         {
                             "allowedFileTypes": "",
@@ -289,9 +309,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "flatType",
+                            "propertyName": "houseType",
                             "propertyType": "Select",
-                            "uid": "1230350858230"
+                            "uid": "1334937916484"
                         },
                         {
                             "allowedFileTypes": "",
@@ -543,7 +563,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2017-07-28 05:14",
+        "last_modified": "2017-07-28 07:18",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

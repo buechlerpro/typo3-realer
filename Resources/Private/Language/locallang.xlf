@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-28T17:14:02Z" product-name="realer">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-28T19:17:59Z" product-name="realer">
 		<header/>
 		<body>
 			<trans-unit id="tx_realer_domain_model_property">
@@ -75,14 +75,20 @@
 			<trans-unit id="tx_realer_domain_model_property.orientation">
 				<source>Orientation</source>
 			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.view">
+				<source>View</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_rural_zone">
+				<source>Has Rural Zone</source>
+			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.object_type">
 				<source>Object Type</source>
 			</trans-unit>
-			<trans-unit id="tx_realer_domain_model_property.house_type">
-				<source>House Type</source>
-			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.flat_type">
 				<source>Flat Type</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.house_type">
+				<source>House Type</source>
 			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.land_type">
 				<source>Land Type</source>

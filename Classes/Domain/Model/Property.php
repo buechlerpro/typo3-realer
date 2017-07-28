@@ -208,13 +208,6 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $landType = 0;
 
     /**
-     * how many stars?
-     * 
-     * @var int
-     */
-    protected $classification = 0;
-
-    /**
      * isNew
      * 
      * @var bool
@@ -241,6 +234,13 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $usefulArea = '';
+
+    /**
+     * how many stars?
+     * 
+     * @var int
+     */
+    protected $classification = 0;
 
     /**
      * state
@@ -339,6 +339,20 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var bool
      */
     protected $hasBarbecue = false;
+
+    /**
+     * View one has being at the object
+     * 
+     * @var string
+     */
+    protected $view = '';
+
+    /**
+     * Mark if object has some rural zone
+     * 
+     * @var bool
+     */
+    protected $hasRuralZone = false;
 
     /**
      * Returns the title
@@ -1444,5 +1458,57 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function isHasBarbecue()
     {
         return $this->hasBarbecue;
+    }
+
+    /**
+     * Returns the view
+     * 
+     * @return string $view
+     */
+    public function getView()
+    {
+        return $this->view;
+    }
+
+    /**
+     * Sets the view
+     * 
+     * @param string $view
+     * @return void
+     */
+    public function setView($view)
+    {
+        $this->view = $view;
+    }
+
+    /**
+     * Returns the hasRuralZone
+     * 
+     * @return bool $hasRuralZone
+     */
+    public function getHasRuralZone()
+    {
+        return $this->hasRuralZone;
+    }
+
+    /**
+     * Sets the hasRuralZone
+     * 
+     * @param bool $hasRuralZone
+     * @return void
+     */
+    public function setHasRuralZone($hasRuralZone)
+    {
+        $this->hasRuralZone = $hasRuralZone;
+    }
+
+    /**
+     * Returns the boolean state of hasRuralZone
+     * 
+     * @return bool
+     */
+    public function isHasRuralZone()
+    {
+        return $this->hasRuralZone;
     }
 }
