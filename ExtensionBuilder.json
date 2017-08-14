@@ -349,6 +349,16 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
+                            "propertyName": "landArea",
+                            "propertyType": "Float",
+                            "uid": "1205824814103"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
                             "propertyName": "constructionArea",
                             "propertyType": "Float",
                             "uid": "49391406112"
@@ -563,7 +573,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2017-07-28 07:36",
+        "last_modified": "2017-08-14 02:32",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

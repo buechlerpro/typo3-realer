@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title,agent_reference,has_priority,sales_state,available_for_sale,available_for_rent,available_for_business_transfer,price_before,price,insurance_value,running_cost,images,introduction,location_type,address,zip,place,zone,region,country,latitude,longitude,orientation,view,has_rural_zone,object_type,flat_type,house_type,land_type,is_new,property_age,construction_area,useful_area,classification,state,description,room_count,sleeping_room_count,has_hall,has_cellar,has_storage,has_balcony,has_elevator,has_garage,garage_count,has_chimney,has_pool,has_barbecue',
+        'searchFields' => 'title,agent_reference,has_priority,sales_state,available_for_sale,available_for_rent,available_for_business_transfer,price_before,price,insurance_value,running_cost,images,introduction,location_type,address,zip,place,zone,region,country,latitude,longitude,orientation,view,has_rural_zone,object_type,flat_type,house_type,land_type,is_new,property_age,land_area,construction_area,useful_area,classification,state,description,room_count,sleeping_room_count,has_hall,has_cellar,has_storage,has_balcony,has_elevator,has_garage,garage_count,has_chimney,has_pool,has_barbecue',
         'iconfile' => 'EXT:realer/Resources/Public/Icons/tx_realer_domain_model_property.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, view, has_rural_zone, object_type, flat_type, house_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, view, has_rural_zone, object_type, flat_type, house_type, land_type, is_new, property_age, land_area, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, view, has_rural_zone, object_type, flat_type, house_type, land_type, is_new, property_age, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, view, has_rural_zone, object_type, flat_type, house_type, land_type, is_new, property_age, land_area, construction_area, useful_area, classification, state, description, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -482,6 +482,15 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
+        ],
+        'land_area' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_domain_model_property.land_area',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'double2'
+            ]
         ],
         'construction_area' => [
             'exclude' => true,

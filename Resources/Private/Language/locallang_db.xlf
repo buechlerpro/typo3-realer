@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-28T19:36:43Z" product-name="realer">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-14T14:32:41Z" product-name="realer">
 		<header/>
 		<body>
 			<trans-unit id="tx_realer_domain_model_property">
@@ -98,6 +98,9 @@
 			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.property_age">
 				<source>Property Age</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.land_area">
+				<source>Land Area</source>
 			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.construction_area">
 				<source>Construction Area</source>

@@ -813,6 +813,33 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
+    public function getLandAreaReturnsInitialValueForFloat()
+    {
+        self::assertSame(
+            0.0,
+            $this->subject->getLandArea()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setLandAreaForFloatSetsLandArea()
+    {
+        $this->subject->setLandArea(3.14159265);
+
+        self::assertAttributeEquals(
+            3.14159265,
+            'landArea',
+            $this->subject,
+            '',
+            0.000000001
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getConstructionAreaReturnsInitialValueForFloat()
     {
         self::assertSame(

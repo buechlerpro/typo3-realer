@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-28T19:17:59Z" product-name="realer">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-14T14:32:41Z" product-name="realer">
 		<header/>
 		<body>
 			<trans-unit id="title.description">
@@ -95,6 +95,9 @@
 			</trans-unit>
 			<trans-unit id="property_age.description">
 				<source>Age from the object</source>
+			</trans-unit>
+			<trans-unit id="land_area.description">
+				<source>landArea</source>
 			</trans-unit>
 			<trans-unit id="construction_area.description">
 				<source>The size from the construction area in m2</source>

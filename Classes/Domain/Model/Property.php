@@ -355,6 +355,13 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $hasBarbecue = false;
 
     /**
+     * landArea
+     * 
+     * @var float
+     */
+    protected $landArea = 0.0;
+
+    /**
      * Returns the title
      * 
      * @return string $title
@@ -1510,5 +1517,26 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function isHasRuralZone()
     {
         return $this->hasRuralZone;
+    }
+
+    /**
+     * Returns the landArea
+     * 
+     * @return float $landArea
+     */
+    public function getLandArea()
+    {
+        return $this->landArea;
+    }
+
+    /**
+     * Sets the landArea
+     * 
+     * @param float $landArea
+     * @return void
+     */
+    public function setLandArea($landArea)
+    {
+        $this->landArea = $landArea;
     }
 }

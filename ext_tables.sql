@@ -38,6 +38,7 @@ CREATE TABLE tx_realer_domain_model_property (
 	land_type int(11) DEFAULT '0' NOT NULL,
 	is_new smallint(5) unsigned DEFAULT '0' NOT NULL,
 	property_age varchar(255) DEFAULT '' NOT NULL,
+	land_area double(11,2) DEFAULT '0.00' NOT NULL,
 	construction_area double(11,2) DEFAULT '0.00' NOT NULL,
 	useful_area varchar(255) DEFAULT '' NOT NULL,
 	classification int(11) DEFAULT '0' NOT NULL,
