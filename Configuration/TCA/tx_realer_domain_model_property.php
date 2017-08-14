@@ -507,8 +507,8 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
-            ],
+                'eval' => 'double2'
+            ]
         ],
         'classification' => [
             'exclude' => true,

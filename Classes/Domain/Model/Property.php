@@ -236,16 +236,23 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $propertyAge = '';
 
     /**
-     * constructionArea
+     * Including construction and non-construction area.
+     * 
+     * @var float
+     */
+    protected $landArea = 0.0;
+
+    /**
+     * The area the construction occupies.
      * 
      * @var float
      */
     protected $constructionArea = 0.0;
 
     /**
-     * usefulArea
+     * The useful area within the construction.
      * 
-     * @var string
+     * @var float
      */
     protected $usefulArea = '';
 
@@ -353,13 +360,6 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var bool
      */
     protected $hasBarbecue = false;
-
-    /**
-     * landArea
-     * 
-     * @var float
-     */
-    protected $landArea = 0.0;
 
     /**
      * Returns the title
@@ -1021,27 +1021,6 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the usefulArea
-     * 
-     * @return string $usefulArea
-     */
-    public function getUsefulArea()
-    {
-        return $this->usefulArea;
-    }
-
-    /**
-     * Sets the usefulArea
-     * 
-     * @param string $usefulArea
-     * @return void
-     */
-    public function setUsefulArea($usefulArea)
-    {
-        $this->usefulArea = $usefulArea;
-    }
-
-    /**
      * Returns the introduction
      * 
      * @return string introduction
@@ -1538,5 +1517,26 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setLandArea($landArea)
     {
         $this->landArea = $landArea;
+    }
+
+    /**
+     * Returns the usefulArea
+     * 
+     * @return float usefulArea
+     */
+    public function getUsefulArea()
+    {
+        return $this->usefulArea;
+    }
+
+    /**
+     * Sets the usefulArea
+     * 
+     * @param string $usefulArea
+     * @return void
+     */
+    public function setUsefulArea($usefulArea)
+    {
+        $this->usefulArea = $usefulArea;
     }
 }

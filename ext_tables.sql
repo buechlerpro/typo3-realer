@@ -40,7 +40,7 @@ CREATE TABLE tx_realer_domain_model_property (
 	property_age varchar(255) DEFAULT '' NOT NULL,
 	land_area double(11,2) DEFAULT '0.00' NOT NULL,
 	construction_area double(11,2) DEFAULT '0.00' NOT NULL,
-	useful_area varchar(255) DEFAULT '' NOT NULL,
+	useful_area double(11,2) DEFAULT '0.00' NOT NULL,
 	classification int(11) DEFAULT '0' NOT NULL,
 	state int(11) DEFAULT '0' NOT NULL,
 	description text,

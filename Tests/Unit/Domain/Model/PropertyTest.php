@@ -867,10 +867,10 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getUsefulAreaReturnsInitialValueForString()
+    public function getUsefulAreaReturnsInitialValueForFloat()
     {
         self::assertSame(
-            '',
+            0.0,
             $this->subject->getUsefulArea()
         );
     }
@@ -878,14 +878,16 @@ class PropertyTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setUsefulAreaForStringSetsUsefulArea()
+    public function setUsefulAreaForFloatSetsUsefulArea()
     {
-        $this->subject->setUsefulArea('Conceived at T3CON10');
+        $this->subject->setUsefulArea(3.14159265);
 
         self::assertAttributeEquals(
-            'Conceived at T3CON10',
+            3.14159265,
             'usefulArea',
-            $this->subject
+            $this->subject,
+            '',
+            0.000000001
         );
     }
 

@@ -20,7 +20,5 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_realer_domain_model_property', 'EXT:realer/Resources/Private/Language/locallang_csh_tx_realer_domain_model_property.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_realer_domain_model_property');
 
-
-
     }
 );

@@ -346,7 +346,7 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "",
+                            "propertyDescription": "Including construction and non-construction area.",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
                             "propertyName": "landArea",
@@ -356,7 +356,7 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "",
+                            "propertyDescription": "The area the construction occupies.",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
                             "propertyName": "constructionArea",
@@ -366,11 +366,11 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "",
+                            "propertyDescription": "The useful area within the construction.",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
                             "propertyName": "usefulArea",
-                            "propertyType": "String",
+                            "propertyType": "Float",
                             "uid": "1322114583630"
                         },
                         {
@@ -543,7 +543,7 @@
             "skipGenerateDocumentationTemplate": false,
             "sourceLanguage": "en",
             "state": "alpha",
-            "targetVersion": "8.6.0-8.6.99",
+            "targetVersion": "8.7.0-8.7.99",
             "version": "1.0.0"
         },
         "extensionKey": "realer",
@@ -565,6 +565,7 @@
                     "noncacheableActions": "",
                     "switchableActions": ""
                 },
+                "description": "",
                 "key": "objectlisting",
                 "name": "Realer - Objectlisting"
             }
@@ -573,8 +574,8 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2017-08-14 02:32",
-        "extension_builder_version": "8.6.0",
+        "last_modified": "2017-08-14 06:44",
+        "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }
 }

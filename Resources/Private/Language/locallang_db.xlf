@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-14T14:32:41Z" product-name="realer">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-14T18:44:18Z" product-name="realer">
 		<header/>
 		<body>
 			<trans-unit id="tx_realer_domain_model_property">
@@ -152,6 +152,12 @@
 			</trans-unit>
 			<trans-unit id="tx_realer_domain_model_property.has_barbecue">
 				<source>Has Barbecue</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_objectlisting.name">
+				<source>Realer - Objectlisting</source>
+			</trans-unit>
+			<trans-unit id="tx_realer_objectlisting.description">
+				<source></source>
 			</trans-unit>
 		</body>
 	</file>

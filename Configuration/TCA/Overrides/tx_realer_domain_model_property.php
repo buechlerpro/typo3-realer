@@ -1,13 +1,15 @@
 <?php
+/**
 $GLOBALS['TCA']['tx_realer_domain_model_property']['types'] = [
     '1' => ['showitem' => '
             sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, 
             --div--;LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.tabs.location, location_type, address, zip, place, zone, region, country, latitude, longitude, orientation, view, has_rural_zone, 
-            --div--;LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.tabs.basic, object_type, house_type, flat_type, land_type, is_new, state, classification, property_age, construction_area, useful_area, description, 
+            --div--;LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.tabs.basic, object_type, house_type, flat_type, land_type, is_new, state, classification, property_age, land_area, useful_area, description, 
             --div--;LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.tabs.characteristic, room_count, sleeping_room_count, has_hall, has_cellar, has_storage, has_balcony, has_elevator, has_garage, garage_count, has_chimney, has_pool, has_barbecue, 
             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'
         ]
 ];
+ */
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['columns']['sales_state']['config']['items'] = [
     ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:selectBox.pleaseSelect', 0],
