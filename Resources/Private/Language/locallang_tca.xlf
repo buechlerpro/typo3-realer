@@ -15,6 +15,9 @@
 			<trans-unit id="property.tabs.characteristic">
 				<source>Characteristics</source>
 			</trans-unit>
+			<trans-unit id="property.tabs.detail">
+				<source>Detail</source>
+			</trans-unit>
 			<trans-unit id="property.sales_state.1">
 				<source>For sale</source>
 			</trans-unit>
