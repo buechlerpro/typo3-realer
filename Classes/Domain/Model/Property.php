@@ -97,7 +97,8 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * images
      * 
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @lazy
      * @cascade remove
      */
     protected $images = null;
@@ -362,6 +363,14 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $hasBarbecue = false;
 
     /**
+     * __construct
+     */
+    public function __construct()
+    {
+        $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
      * Returns the title
      * 
      * @return string $title
@@ -614,7 +623,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the images
      * 
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $images
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
      */
     public function getImages()
     {
@@ -624,10 +633,10 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the images
      * 
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $images
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
      * @return void
      */
-    public function setImages(\TYPO3\CMS\Extbase\Domain\Model\FileReference $images)
+    public function setImages($images)
     {
         $this->images = $images;
     }

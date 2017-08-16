@@ -22,3 +22,16 @@ call_user_func(
 
     }
 );
+
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+call_user_func(
+    function()
+    {
+
+        // Static templates
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('realer', 'Configuration/TypoScript/DefaultTheme', 'Real estate publisher - Default theme');
+
+    }
+);

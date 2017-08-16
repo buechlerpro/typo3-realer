@@ -5,13 +5,32 @@
 <f:debug>{_all}</f:debug>
 
 <f:section name="main">
-<h1>Listing for Property</h1>
 
 <f:flashMessages />
 
 
 	<f:for each="{properties}" as="property">
-		<div>{property.uid} {property.title}</div>
+		<div class="row tx-realer-propertylistitem">
+			<div class="col-md-4">
+				<f:for each="{property.images}" as="image" key="key" iteration="i">
+					<f:if condition="{i.isFirst}">
+						<f:image class="img-responsive img-thumbnail"
+								 src="{image.uid}"
+								 alt="{image.originalResource.originalFile.alternative}"
+								 title="{image.originalResource.title}"
+								 maxWidth="400"
+								 treatIdAsReference="1"></f:image>
+					</f:if>
+				</f:for>
+				<div class="tx-realear-vspace visible-sm-block"></div>
+			</div>
+			<div class="col-md-8">
+				<h4>{property.title}</h4>
+				<div>
+					<f:format.html><f:format.crop append="..." maxCharacters="200" respectHtml="1" respectWordBoundaries="1">{property.introduction}</f:format.crop></f:format.html>
+				</div>
+			</div>
+		</div>
 	</f:for>
 
 <!--table  class="tx_realer" >
