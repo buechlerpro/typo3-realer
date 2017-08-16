@@ -153,6 +153,12 @@
 			<trans-unit id="tx_realer_domain_model_property.has_barbecue">
 				<source>Has Barbecue</source>
 			</trans-unit>
+			<trans-unit id="details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="back">
+				<source>Back</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

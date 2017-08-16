@@ -1,23 +1,42 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 
-This Template is responsible for displaying a single view for a domain object
 
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Show.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Single View for Property</h1>
 
-<f:flashMessages />
-<f:render partial="Property/Properties" arguments="{property:property}" />
-<f:link.action action="list">Back to list</f:link.action><br />
-<f:link.action action="new">New Property</f:link.action>
-	</f:section>
+
+	<f:flashMessages />
+
+	<!--f:render partial="Property/Properties" arguments="{property:property}" /-->
+
+	<h1>{property.title}</h1>
+	<div class="row">
+
+		<div class="col-md-4">
+			<f:for each="{property.images}" as="image" key="key" iteration="i">
+				<f:image class="img-responsive img-thumbnail tx-realer-propertylistitem-text"
+						 src="{image.uid}"
+						 alt="{image.originalResource.originalFile.alternative}"
+						 title="{image.originalResource.title}"
+						 maxWidth="{settings.image.maxWidth}"
+						 treatIdAsReference="1"></f:image>
+			</f:for>
+			<div class="tx-realear-vspace visible-xs-block visible-sm-block"></div>
+		</div>
+		<div class="col-md-8">
+			<div class="tx-realer-propertylistitem-text">
+				<f:format.html>{property.introduction}</f:format.html>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="tx-realer-footer">
+		<f:link.action action="list">
+			<button class="btn btn-info"><f:translate key="back" /></button>
+		</f:link.action><br />
+	</div>
+
+</f:section>
 </html>

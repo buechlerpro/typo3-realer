@@ -1,11 +1,20 @@
+@realer-block-border: @gray-light 1px solid;
+
+.tx-realear-vspace {
+  overflow: hidden;
+  height: 1.6rem;
+}
+
+.tx-realer-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: @realer-block-border;
+}
+
 .tx-realer-propertylistitem {
   &:nth-last-child(n+2) {
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
-	border-bottom: @gray-light 1px solid;
-  }
-  .tx-realear-vspace {
-	overflow: hidden;
-	height: 1.6rem;
+	border-bottom: @realer-block-border;
   }
 }
