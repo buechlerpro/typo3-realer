@@ -14,11 +14,11 @@
 			<div class="col-md-4">
 				<f:for each="{property.images}" as="image" key="key" iteration="i">
 					<f:if condition="{i.isFirst}">
-						<f:image class="img-responsive img-thumbnail"
+						<f:image class="img-responsive img-thumbnail tx-realer-propertylistitem-text"
 								 src="{image.uid}"
 								 alt="{image.originalResource.originalFile.alternative}"
 								 title="{image.originalResource.title}"
-								 maxWidth="400"
+								 maxWidth="{settings.image.maxWidth}"
 								 treatIdAsReference="1"></f:image>
 					</f:if>
 				</f:for>
@@ -26,8 +26,8 @@
 			</div>
 			<div class="col-md-8">
 				<h4>{property.title}</h4>
-				<div>
-					<f:format.html><f:format.crop append="..." maxCharacters="200" respectHtml="1" respectWordBoundaries="1">{property.introduction}</f:format.crop></f:format.html>
+				<div class="tx-realer-propertylistitem-text">
+					<f:format.html><f:format.crop append="..." maxCharacters="{settings.text.maxCharacters}" respectHtml="1" respectWordBoundaries="1">{property.introduction}</f:format.crop></f:format.html>
 				</div>
 			</div>
 		</div>
