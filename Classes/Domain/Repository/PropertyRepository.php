@@ -17,4 +17,6 @@ namespace Synac\Realer\Domain\Repository;
  */
 class PropertyRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+
+
+}

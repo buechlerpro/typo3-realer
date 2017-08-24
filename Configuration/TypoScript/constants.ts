@@ -42,5 +42,7 @@ plugin.tx_realer_objectlisting {
 		image.maxWidth = 400
 		# cat=plugin.tx_realer_objectlisting/realer-210/b; type=string; label=Max text characters in list view
 		text.maxCharacters = 250
+		# cat=plugin.tx_realer_objectlisting/realer-210/c; type=string; label=Properties count per page
+		propertyCountPerPage = 7
 	}
 }

@@ -6,39 +6,49 @@
 
 <f:section name="main">
 
-<f:flashMessages />
+	<f:flashMessages />
 
 
-	<f:for each="{properties}" as="property">
-		<div class="row tx-realer-propertylistitem">
-			<div class="col-md-4">
-				<f:for each="{property.images}" as="image" key="key" iteration="i">
-					<f:if condition="{i.isFirst}">
-						<f:image class="img-responsive img-thumbnail tx-realer-propertylistitem-text"
-								 src="{image.uid}"
-								 alt="{image.originalResource.originalFile.alternative}"
-								 title="{image.originalResource.title}"
-								 maxWidth="{settings.image.maxWidth}"
-								 treatIdAsReference="1"></f:image>
-					</f:if>
-				</f:for>
-				<div class="tx-realear-vspace visible-xs-block visible-sm-block"></div>
-			</div>
-			<div class="col-md-8">
-				<h4>{property.title}</h4>
-				<div class="tx-realer-propertylistitem-text">
-					<f:format.crop append="..." maxCharacters="{settings.text.maxCharacters}" respectHtml="1" respectWordBoundaries="1">
-						<f:format.html>{property.introduction}</f:format.html>
-					</f:format.crop>
+	<f:widget.paginate objects="{properties}" as="paginatedProperties"
+					   configuration="{itemsPerPage:'{settings.propertyCountPerPage}', insertAbove:1, insertBelow:1}">
+
+
+		<div class="tx-realer-propertylistpage">
+			<f:for each="{paginatedProperties}" as="property">
+				<div class="tx-realer-propertylistitem">
+					<div class="row">
+						<div class="col-md-4">
+							<f:for each="{property.images}" as="image" key="key" iteration="i">
+								<f:if condition="{i.isFirst}">
+									<f:image class="img-responsive img-thumbnail tx-realer-propertylistitem-text"
+											 src="{image.uid}"
+											 alt="{image.originalResource.originalFile.alternative}"
+											 title="{image.originalResource.title}"
+											 maxWidth="{settings.image.maxWidth}"
+											 treatIdAsReference="1"></f:image>
+								</f:if>
+							</f:for>
+							<div class="tx-realear-vspace visible-xs-block visible-sm-block"></div>
+						</div>
+						<div class="col-md-8">
+							<h4>{property.title}</h4>
+							<div class="tx-realer-propertylistitem-text">
+								<f:format.crop append="..." maxCharacters="{settings.text.maxCharacters}" respectHtml="1" respectWordBoundaries="1">
+									<f:format.html>{property.introduction}</f:format.html>
+								</f:format.crop>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<f:link.action action="show" arguments="{property : property}">
+							<button class="btn btn-info pull-right"><f:translate key="details" /></button>
+						</f:link.action>
+					</div>
 				</div>
-				<div class="clearfix">
-					<f:link.action action="show" arguments="{property : property}">
-						<button class="btn btn-info pull-right"><f:translate key="details" /></button>
-					</f:link.action>
-				</div>
-			</div>
+			</f:for>
 		</div>
-	</f:for>
+
+	</f:widget.paginate>
 
 <!--table  class="tx_realer" >
 	<tr>
