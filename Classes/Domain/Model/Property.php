@@ -1,4 +1,5 @@
 <?php
+
 namespace Synac\Realer\Domain\Model;
 
 /***
@@ -19,84 +20,84 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * title
-     * 
+     *
      * @var string
      */
     protected $title = '';
 
     /**
      * agentReference
-     * 
+     *
      * @var string
      */
     protected $agentReference = '';
 
     /**
      * hasPriority
-     * 
+     *
      * @var bool
      */
     protected $hasPriority = false;
 
     /**
      * salesState
-     * 
+     *
      * @var int
      */
     protected $salesState = 0;
 
     /**
      * availableForSale
-     * 
+     *
      * @var bool
      */
     protected $availableForSale = false;
 
     /**
      * availableForRent
-     * 
+     *
      * @var bool
      */
     protected $availableForRent = false;
 
     /**
      * availableForBusinessTransfer
-     * 
+     *
      * @var bool
      */
     protected $availableForBusinessTransfer = false;
 
     /**
      * priceBefore
-     * 
+     *
      * @var float
      */
     protected $priceBefore = 0.0;
 
     /**
      * price
-     * 
+     *
      * @var float
      */
     protected $price = 0.0;
 
     /**
      * insuranceValue
-     * 
+     *
      * @var float
      */
     protected $insuranceValue = 0.0;
 
     /**
      * runningCost
-     * 
+     *
      * @var float
      */
     protected $runningCost = 0.0;
 
     /**
      * images
-     * 
+     *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      * @lazy
      * @cascade remove
@@ -105,259 +106,259 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * introduction
-     * 
+     *
      * @var string
      */
     protected $introduction = '';
 
     /**
      * centric/rural
-     * 
+     *
      * @var int
      */
     protected $locationType = 0;
 
     /**
      * address
-     * 
+     *
      * @var string
      */
     protected $address = '';
 
     /**
      * zip
-     * 
+     *
      * @var string
      */
     protected $zip = '';
 
     /**
      * place
-     * 
+     *
      * @var string
      */
     protected $place = '';
 
     /**
      * zone
-     * 
+     *
      * @var string
      */
     protected $zone = '';
 
     /**
      * region
-     * 
+     *
      * @var string
      */
     protected $region = '';
 
     /**
      * country
-     * 
+     *
      * @var string
      */
     protected $country = '';
 
     /**
      * latitude
-     * 
+     *
      * @var string
      */
     protected $latitude = '';
 
     /**
      * longitude
-     * 
+     *
      * @var string
      */
     protected $longitude = '';
 
     /**
      * orientation
-     * 
+     *
      * @var string
      */
     protected $orientation = '';
 
     /**
      * View one has being at the object
-     * 
+     *
      * @var string
      */
     protected $view = '';
 
     /**
      * Mark if object has some rural zone
-     * 
+     *
      * @var bool
      */
     protected $hasRuralZone = false;
 
     /**
      * objectType
-     * 
+     *
      * @var int
      */
     protected $objectType = 0;
 
     /**
      * flatType
-     * 
+     *
      * @var int
      */
     protected $flatType = 0;
 
     /**
      * houseType
-     * 
+     *
      * @var int
      */
     protected $houseType = 0;
 
     /**
      * landType
-     * 
+     *
      * @var int
      */
     protected $landType = 0;
 
     /**
      * isNew
-     * 
+     *
      * @var bool
      */
     protected $isNew = false;
 
     /**
      * propertyAge
-     * 
+     *
      * @var string
      */
     protected $propertyAge = '';
 
     /**
      * Including construction and non-construction area.
-     * 
+     *
      * @var float
      */
     protected $landArea = 0.0;
 
     /**
      * The area the construction occupies.
-     * 
+     *
      * @var float
      */
     protected $constructionArea = 0.0;
 
     /**
      * The useful area within the construction.
-     * 
+     *
      * @var float
      */
     protected $usefulArea = '';
 
     /**
      * how many stars?
-     * 
+     *
      * @var int
      */
     protected $classification = 0;
 
     /**
      * state
-     * 
+     *
      * @var int
      */
     protected $state = 0;
 
     /**
      * description
-     * 
+     *
      * @var string
      */
     protected $description = '';
 
     /**
      * roomCount
-     * 
+     *
      * @var float
      */
     protected $roomCount = 0.0;
 
     /**
      * sleepingRoomCount
-     * 
+     *
      * @var int
      */
     protected $sleepingRoomCount = 0;
 
     /**
      * Mark if object has a hall
-     * 
+     *
      * @var bool
      */
     protected $hasHall = false;
 
     /**
      * Mark if object has a cellar
-     * 
+     *
      * @var bool
      */
     protected $hasCellar = false;
 
     /**
      * Mark if object has a storage room
-     * 
+     *
      * @var bool
      */
     protected $hasStorage = false;
 
     /**
      * Mark if object has a balcony
-     * 
+     *
      * @var bool
      */
     protected $hasBalcony = false;
 
     /**
      * Mark if object has an elevator
-     * 
+     *
      * @var bool
      */
     protected $hasElevator = false;
 
     /**
      * Mark if object has at least one garage
-     * 
+     *
      * @var bool
      */
     protected $hasGarage = false;
 
     /**
      * Cuantity of garages
-     * 
+     *
      * @var int
      */
     protected $garageCount = 0;
 
     /**
      * Mark if object has a chimney
-     * 
+     *
      * @var bool
      */
     protected $hasChimney = false;
 
     /**
      * Mark if object has a pool
-     * 
+     *
      * @var bool
      */
     protected $hasPool = false;
 
     /**
      * Mark if object has a barbecue
-     * 
+     *
      * @var bool
      */
     protected $hasBarbecue = false;
@@ -372,7 +373,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the title
-     * 
+     *
      * @return string $title
      */
     public function getTitle()
@@ -382,7 +383,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the title
-     * 
+     *
      * @param string $title
      * @return void
      */
@@ -393,7 +394,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the agentReference
-     * 
+     *
      * @return string $agentReference
      */
     public function getAgentReference()
@@ -403,7 +404,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the agentReference
-     * 
+     *
      * @param string $agentReference
      * @return void
      */
@@ -414,7 +415,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasPriority
-     * 
+     *
      * @return bool $hasPriority
      */
     public function getHasPriority()
@@ -424,7 +425,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasPriority
-     * 
+     *
      * @param bool $hasPriority
      * @return void
      */
@@ -435,7 +436,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasPriority
-     * 
+     *
      * @return bool
      */
     public function isHasPriority()
@@ -445,7 +446,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the salesState
-     * 
+     *
      * @return int $salesState
      */
     public function getSalesState()
@@ -455,7 +456,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the salesState
-     * 
+     *
      * @param int $salesState
      * @return void
      */
@@ -466,7 +467,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the availableForSale
-     * 
+     *
      * @return bool $availableForSale
      */
     public function getAvailableForSale()
@@ -476,7 +477,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the availableForSale
-     * 
+     *
      * @param bool $availableForSale
      * @return void
      */
@@ -487,7 +488,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of availableForSale
-     * 
+     *
      * @return bool
      */
     public function isAvailableForSale()
@@ -497,7 +498,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the availableForRent
-     * 
+     *
      * @return bool $availableForRent
      */
     public function getAvailableForRent()
@@ -507,7 +508,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the availableForRent
-     * 
+     *
      * @param bool $availableForRent
      * @return void
      */
@@ -518,7 +519,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of availableForRent
-     * 
+     *
      * @return bool
      */
     public function isAvailableForRent()
@@ -528,7 +529,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the availableForBusinessTransfer
-     * 
+     *
      * @return bool $availableForBusinessTransfer
      */
     public function getAvailableForBusinessTransfer()
@@ -538,7 +539,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the availableForBusinessTransfer
-     * 
+     *
      * @param bool $availableForBusinessTransfer
      * @return void
      */
@@ -549,7 +550,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of availableForBusinessTransfer
-     * 
+     *
      * @return bool
      */
     public function isAvailableForBusinessTransfer()
@@ -559,7 +560,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the priceBefore
-     * 
+     *
      * @return float $priceBefore
      */
     public function getPriceBefore()
@@ -569,7 +570,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the priceBefore
-     * 
+     *
      * @param float $priceBefore
      * @return void
      */
@@ -580,7 +581,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the insuranceValue
-     * 
+     *
      * @return float $insuranceValue
      */
     public function getInsuranceValue()
@@ -590,7 +591,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the insuranceValue
-     * 
+     *
      * @param float $insuranceValue
      * @return void
      */
@@ -601,7 +602,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the runningCost
-     * 
+     *
      * @return float $runningCost
      */
     public function getRunningCost()
@@ -611,7 +612,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the runningCost
-     * 
+     *
      * @param float $runningCost
      * @return void
      */
@@ -622,7 +623,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the images
-     * 
+     *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
      */
     public function getImages()
@@ -632,7 +633,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the images
-     * 
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
      * @return void
      */
@@ -643,7 +644,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the locationType
-     * 
+     *
      * @return int $locationType
      */
     public function getLocationType()
@@ -653,7 +654,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the locationType
-     * 
+     *
      * @param int $locationType
      * @return void
      */
@@ -664,7 +665,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the address
-     * 
+     *
      * @return string $address
      */
     public function getAddress()
@@ -674,7 +675,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the address
-     * 
+     *
      * @param string $address
      * @return void
      */
@@ -685,7 +686,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the zip
-     * 
+     *
      * @return string $zip
      */
     public function getZip()
@@ -695,7 +696,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the zip
-     * 
+     *
      * @param string $zip
      * @return void
      */
@@ -706,7 +707,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the place
-     * 
+     *
      * @return string $place
      */
     public function getPlace()
@@ -716,7 +717,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the place
-     * 
+     *
      * @param string $place
      * @return void
      */
@@ -727,7 +728,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the zone
-     * 
+     *
      * @return string $zone
      */
     public function getZone()
@@ -737,7 +738,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the zone
-     * 
+     *
      * @param string $zone
      * @return void
      */
@@ -748,7 +749,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the region
-     * 
+     *
      * @return string $region
      */
     public function getRegion()
@@ -758,7 +759,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the region
-     * 
+     *
      * @param string $region
      * @return void
      */
@@ -769,7 +770,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the country
-     * 
+     *
      * @return string $country
      */
     public function getCountry()
@@ -779,7 +780,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the country
-     * 
+     *
      * @param string $country
      * @return void
      */
@@ -790,7 +791,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the latitude
-     * 
+     *
      * @return string $latitude
      */
     public function getLatitude()
@@ -800,7 +801,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the latitude
-     * 
+     *
      * @param string $latitude
      * @return void
      */
@@ -811,7 +812,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the longitude
-     * 
+     *
      * @return string $longitude
      */
     public function getLongitude()
@@ -821,7 +822,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the longitude
-     * 
+     *
      * @param string $longitude
      * @return void
      */
@@ -832,7 +833,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the orientation
-     * 
+     *
      * @return string $orientation
      */
     public function getOrientation()
@@ -842,7 +843,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the orientation
-     * 
+     *
      * @param string $orientation
      * @return void
      */
@@ -853,7 +854,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the objectType
-     * 
+     *
      * @return int $objectType
      */
     public function getObjectType()
@@ -863,7 +864,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the objectType
-     * 
+     *
      * @param int $objectType
      * @return void
      */
@@ -874,7 +875,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the houseType
-     * 
+     *
      * @return int $houseType
      */
     public function getHouseType()
@@ -884,7 +885,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the houseType
-     * 
+     *
      * @param int $houseType
      * @return void
      */
@@ -895,7 +896,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the flatType
-     * 
+     *
      * @return int $flatType
      */
     public function getFlatType()
@@ -905,7 +906,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the flatType
-     * 
+     *
      * @param int $flatType
      * @return void
      */
@@ -916,7 +917,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the landType
-     * 
+     *
      * @return int $landType
      */
     public function getLandType()
@@ -926,7 +927,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the landType
-     * 
+     *
      * @param int $landType
      * @return void
      */
@@ -937,7 +938,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the classification
-     * 
+     *
      * @return int $classification
      */
     public function getClassification()
@@ -947,7 +948,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the classification
-     * 
+     *
      * @param int $classification
      * @return void
      */
@@ -958,7 +959,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the isNew
-     * 
+     *
      * @return bool $isNew
      */
     public function getIsNew()
@@ -968,7 +969,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the isNew
-     * 
+     *
      * @param bool $isNew
      * @return void
      */
@@ -979,7 +980,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of isNew
-     * 
+     *
      * @return bool
      */
     public function isIsNew()
@@ -989,7 +990,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the propertyAge
-     * 
+     *
      * @return string $propertyAge
      */
     public function getPropertyAge()
@@ -999,7 +1000,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the propertyAge
-     * 
+     *
      * @param string $propertyAge
      * @return void
      */
@@ -1010,7 +1011,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the constructionArea
-     * 
+     *
      * @return float $constructionArea
      */
     public function getConstructionArea()
@@ -1020,7 +1021,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the constructionArea
-     * 
+     *
      * @param float $constructionArea
      * @return void
      */
@@ -1031,7 +1032,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the introduction
-     * 
+     *
      * @return string introduction
      */
     public function getIntroduction()
@@ -1041,7 +1042,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the introduction
-     * 
+     *
      * @param string $introduction
      * @return void
      */
@@ -1052,7 +1053,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the description
-     * 
+     *
      * @return string $description
      */
     public function getDescription()
@@ -1062,7 +1063,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the description
-     * 
+     *
      * @param string $description
      * @return void
      */
@@ -1073,7 +1074,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the state
-     * 
+     *
      * @return int state
      */
     public function getState()
@@ -1083,7 +1084,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the state
-     * 
+     *
      * @param int $state
      * @return void
      */
@@ -1094,7 +1095,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the price
-     * 
+     *
      * @return float price
      */
     public function getPrice()
@@ -1104,7 +1105,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the price
-     * 
+     *
      * @param float $price
      * @return void
      */
@@ -1115,7 +1116,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the roomCount
-     * 
+     *
      * @return float $roomCount
      */
     public function getRoomCount()
@@ -1125,7 +1126,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the roomCount
-     * 
+     *
      * @param float $roomCount
      * @return void
      */
@@ -1136,7 +1137,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the sleepingRoomCount
-     * 
+     *
      * @return int $sleepingRoomCount
      */
     public function getSleepingRoomCount()
@@ -1146,7 +1147,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the sleepingRoomCount
-     * 
+     *
      * @param int $sleepingRoomCount
      * @return void
      */
@@ -1157,7 +1158,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasHall
-     * 
+     *
      * @return bool $hasHall
      */
     public function getHasHall()
@@ -1167,7 +1168,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasHall
-     * 
+     *
      * @param bool $hasHall
      * @return void
      */
@@ -1178,7 +1179,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasHall
-     * 
+     *
      * @return bool
      */
     public function isHasHall()
@@ -1188,7 +1189,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasCellar
-     * 
+     *
      * @return bool $hasCellar
      */
     public function getHasCellar()
@@ -1198,7 +1199,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasCellar
-     * 
+     *
      * @param bool $hasCellar
      * @return void
      */
@@ -1209,7 +1210,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasCellar
-     * 
+     *
      * @return bool
      */
     public function isHasCellar()
@@ -1219,7 +1220,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasStorage
-     * 
+     *
      * @return bool $hasStorage
      */
     public function getHasStorage()
@@ -1229,7 +1230,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasStorage
-     * 
+     *
      * @param bool $hasStorage
      * @return void
      */
@@ -1240,7 +1241,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasStorage
-     * 
+     *
      * @return bool
      */
     public function isHasStorage()
@@ -1250,7 +1251,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasBalcony
-     * 
+     *
      * @return bool $hasBalcony
      */
     public function getHasBalcony()
@@ -1260,7 +1261,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasBalcony
-     * 
+     *
      * @param bool $hasBalcony
      * @return void
      */
@@ -1271,7 +1272,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasBalcony
-     * 
+     *
      * @return bool
      */
     public function isHasBalcony()
@@ -1281,7 +1282,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasElevator
-     * 
+     *
      * @return bool $hasElevator
      */
     public function getHasElevator()
@@ -1291,7 +1292,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasElevator
-     * 
+     *
      * @param bool $hasElevator
      * @return void
      */
@@ -1302,7 +1303,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasElevator
-     * 
+     *
      * @return bool
      */
     public function isHasElevator()
@@ -1312,7 +1313,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasGarage
-     * 
+     *
      * @return bool $hasGarage
      */
     public function getHasGarage()
@@ -1322,7 +1323,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasGarage
-     * 
+     *
      * @param bool $hasGarage
      * @return void
      */
@@ -1333,7 +1334,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasGarage
-     * 
+     *
      * @return bool
      */
     public function isHasGarage()
@@ -1343,7 +1344,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the garageCount
-     * 
+     *
      * @return int $garageCount
      */
     public function getGarageCount()
@@ -1353,7 +1354,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the garageCount
-     * 
+     *
      * @param int $garageCount
      * @return void
      */
@@ -1364,7 +1365,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasChimney
-     * 
+     *
      * @return bool $hasChimney
      */
     public function getHasChimney()
@@ -1374,7 +1375,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasChimney
-     * 
+     *
      * @param bool $hasChimney
      * @return void
      */
@@ -1385,7 +1386,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasChimney
-     * 
+     *
      * @return bool
      */
     public function isHasChimney()
@@ -1395,7 +1396,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasPool
-     * 
+     *
      * @return bool $hasPool
      */
     public function getHasPool()
@@ -1405,7 +1406,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasPool
-     * 
+     *
      * @param bool $hasPool
      * @return void
      */
@@ -1416,7 +1417,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasPool
-     * 
+     *
      * @return bool
      */
     public function isHasPool()
@@ -1426,7 +1427,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasBarbecue
-     * 
+     *
      * @return bool $hasBarbecue
      */
     public function getHasBarbecue()
@@ -1436,7 +1437,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasBarbecue
-     * 
+     *
      * @param bool $hasBarbecue
      * @return void
      */
@@ -1447,7 +1448,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasBarbecue
-     * 
+     *
      * @return bool
      */
     public function isHasBarbecue()
@@ -1457,7 +1458,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the view
-     * 
+     *
      * @return string $view
      */
     public function getView()
@@ -1467,7 +1468,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the view
-     * 
+     *
      * @param string $view
      * @return void
      */
@@ -1478,7 +1479,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the hasRuralZone
-     * 
+     *
      * @return bool $hasRuralZone
      */
     public function getHasRuralZone()
@@ -1488,7 +1489,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the hasRuralZone
-     * 
+     *
      * @param bool $hasRuralZone
      * @return void
      */
@@ -1499,7 +1500,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the boolean state of hasRuralZone
-     * 
+     *
      * @return bool
      */
     public function isHasRuralZone()
@@ -1509,7 +1510,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the landArea
-     * 
+     *
      * @return float $landArea
      */
     public function getLandArea()
@@ -1519,7 +1520,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the landArea
-     * 
+     *
      * @param float $landArea
      * @return void
      */
@@ -1530,7 +1531,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the usefulArea
-     * 
+     *
      * @return float usefulArea
      */
     public function getUsefulArea()
@@ -1540,7 +1541,7 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the usefulArea
-     * 
+     *
      * @param string $usefulArea
      * @return void
      */

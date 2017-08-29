@@ -28,10 +28,9 @@ class PropertyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     /**
      * action list
      *
-     * @param int $pageNumber
      * @return void
      */
-    public function listAction($pageNumber = 0)
+    public function listAction()
     {
         $this->view->assignMultiple([
             'properties' => $this->propertyRepository->findAll(),
