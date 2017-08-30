@@ -32,8 +32,13 @@ class PropertyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function listAction()
     {
+        if (!$this->request->hasArgument('objectType')) {
+            $objects = $this->propertyRepository->findAll();
+        } else {
+            $objects = $this->propertyRepository->findByObjectType($this->request->getArgument('objectType'));
+        };
         $this->view->assignMultiple([
-            'properties' => $this->propertyRepository->findAll(),
+            'properties' => $objects,
             'settings' => $this->settings
         ]);
     }
