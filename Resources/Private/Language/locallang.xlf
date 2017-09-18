@@ -159,6 +159,9 @@
 			<trans-unit id="back">
 				<source>Back</source>
 			</trans-unit>
+			<trans-unit id="overview">
+				<source>Übersicht</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
