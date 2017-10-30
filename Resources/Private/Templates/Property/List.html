@@ -16,22 +16,31 @@
 		<div class="tx-realer-propertylistpage">
 			<f:for each="{paginatedProperties}" as="property">
 				<div class="tx-realer-propertylistitem">
+					<h4>{property.title}</h4>
 					<div class="row">
 						<div class="col-md-4">
 							<f:for each="{property.images}" as="image" key="key" iteration="i">
 								<f:if condition="{i.isFirst}">
-									<f:image class="img-responsive img-thumbnail tx-realer-propertylistitem-text"
-											 src="{image.uid}"
-											 alt="{image.originalResource.originalFile.alternative}"
-											 title="{image.originalResource.title}"
-											 maxWidth="{settings.image.maxWidth}"
-											 treatIdAsReference="1"></f:image>
+									<figure class="image">
+										<img class="lazyload tx-realer-propertylistitem-text"
+											src="EXT:realer/Resources/Public/Images/blank.png"
+											data-src="{f:uri.image(src: image.uid, treatIdAsReference: 1)}"
+											alt="{image.originalResource.originalFile.alternative}"
+											title="{image.originalResource.title}" />
+										<noscript>
+											<f:image class="tx-realer-propertylistitem-text"
+												src="{image.uid}"
+												alt="{image.originalResource.originalFile.alternative}"
+												title="{image.originalResource.title}"
+												maxWidth="{settings.image.maxWidth}"
+												treatIdAsReference="1"></f:image>
+										</noscript>
+									</figure>
 								</f:if>
 							</f:for>
 							<div class="tx-realear-vspace visible-xs-block visible-sm-block"></div>
 						</div>
 						<div class="col-md-8">
-							<h4>{property.title}</h4>
 							<div class="tx-realer-propertylistitem-text">
 								<f:format.crop append="..." maxCharacters="{settings.text.maxCharacters}" respectHtml="1" respectWordBoundaries="1">
 									<f:format.html>{property.introduction}</f:format.html>
