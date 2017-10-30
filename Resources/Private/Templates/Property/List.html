@@ -1,12 +1,12 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Default"/>
 
 
 <f:debug>{_all}</f:debug>
 
 <f:section name="main">
 
-	<f:flashMessages />
+	<f:flashMessages/>
 
 
 	<f:widget.paginate objects="{properties}" as="paginatedProperties"
@@ -16,24 +16,24 @@
 		<div class="tx-realer-propertylistpage">
 			<f:for each="{paginatedProperties}" as="property">
 				<div class="tx-realer-propertylistitem">
-					<h4>{property.title}</h4>
+					<h4 class="tx-realer-title">{property.title}</h4>
 					<div class="row">
 						<div class="col-md-4">
 							<f:for each="{property.images}" as="image" key="key" iteration="i">
 								<f:if condition="{i.isFirst}">
 									<figure class="image">
-										<img class="lazyload tx-realer-propertylistitem-text"
-											src="EXT:realer/Resources/Public/Images/blank.png"
-											data-src="{f:uri.image(src: image.uid, treatIdAsReference: 1)}"
-											alt="{image.originalResource.originalFile.alternative}"
-											title="{image.originalResource.title}" />
+										<img class="lazyload tx-realer-image"
+											 src="EXT:realer/Resources/Public/Images/blank.png"
+											 data-src="{f:uri.image(src: image.uid, treatIdAsReference: 1)}"
+											 alt="{image.originalResource.originalFile.alternative}"
+											 title="{image.originalResource.title}"/>
 										<noscript>
-											<f:image class="tx-realer-propertylistitem-text"
-												src="{image.uid}"
-												alt="{image.originalResource.originalFile.alternative}"
-												title="{image.originalResource.title}"
-												maxWidth="{settings.image.maxWidth}"
-												treatIdAsReference="1"></f:image>
+											<f:image class="tx-realer-image"
+													 src="{image.uid}"
+													 alt="{image.originalResource.originalFile.alternative}"
+													 title="{image.originalResource.title}"
+													 maxWidth="{settings.image.maxWidth}"
+													 treatIdAsReference="1"></f:image>
 										</noscript>
 									</figure>
 								</f:if>
@@ -41,8 +41,9 @@
 							<div class="tx-realear-vspace visible-xs-block visible-sm-block"></div>
 						</div>
 						<div class="col-md-8">
-							<div class="tx-realer-propertylistitem-text">
-								<f:format.crop append="..." maxCharacters="{settings.text.maxCharacters}" respectHtml="1" respectWordBoundaries="1">
+							<div class="tx-realer-text">
+								<f:format.crop append="..." maxCharacters="{settings.text.maxCharacters}"
+											   respectHtml="1" respectWordBoundaries="1">
 									<f:format.html>{property.introduction}</f:format.html>
 								</f:format.crop>
 							</div>
@@ -50,7 +51,9 @@
 					</div>
 					<div class="clearfix">
 						<f:link.action action="show" arguments="{property : property}">
-							<button class="btn btn-info pull-right"><f:translate key="details" /></button>
+							<button class="btn btn-bps-1 pull-right">
+								<f:translate key="details"/>
+							</button>
 						</f:link.action>
 					</div>
 				</div>
@@ -58,6 +61,10 @@
 		</div>
 
 	</f:widget.paginate>
+
+
+
+</f:section>
 
 <!--table  class="tx_realer" >
 	<tr>
@@ -142,6 +149,4 @@
 		</tr>
 	</f:for>
 </table-->
-
-</f:section>
 </html>

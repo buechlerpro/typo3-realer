@@ -1,149 +1,114 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
-
+<f:layout name="Default"/>
 
 
 <f:section name="main">
 
 
-	<f:flashMessages />
+	<f:flashMessages/>
 
 	<!--f:render partial="Property/Properties" arguments="{property:property}" /-->
 
-	<h1>{property.title}</h1>
+	<h1 class="tx-realer-title">{property.title}</h1>
 
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingOne">
-				<h4 class="panel-title">
-					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						<f:translate key="overview"></f:translate>
-					</a>
-				</h4>
-			</div>
-			<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				<div class="panel-body">
-					<div class="row">
-						<div class="col-md-4">
-							<f:for each="{property.images}" as="image" key="key" iteration="i">
-								<f:image class="img-responsive img-thumbnail tx-realer-propertylistitem-text"
-										 src="{image.uid}"
-										 alt="{image.originalResource.originalFile.alternative}"
-										 title="{image.originalResource.title}"
-										 maxWidth="{settings.image.maxWidth}"
-										 treatIdAsReference="1"></f:image>
-							</f:for>
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab"
+												  data-toggle="tab">
+			<f:translate key="overview"></f:translate>
+		</a></li>
+		<li role="presentation"><a href="#details" aria-controls="details" role="tab" data-toggle="tab">
+			<f:translate key="details"></f:translate>
+		</a></li>
+	</ul>
 
-							<div class="tx-realer-vspace visible-xs-block visible-sm-block"></div>
-						</div>
-						<div class="col-md-8">
-							<div class="tx-realer-propertyitem-overview-text">
-								<f:format.html>{property.introduction}</f:format.html>
-							</div>
-						</div>
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="overview">
+			<div class="row">
+				<div class="col-md-5">
+					<f:for each="{property.images}" as="image" key="key" iteration="i">
+						<figure class="image">
+							<f:image class="tx-realer-image"
+									 src="{image.uid}"
+									 alt="{image.originalResource.originalFile.alternative}"
+									 title="{image.originalResource.title}"
+									 maxWidth="{settings.image.maxWidth}"
+									 treatIdAsReference="1"></f:image>
+						</figure>
+					</f:for>
+
+					<div class="tx-realer-listgroup list-group">
+						<dl class="dl-horizontal list-group-item">
+							<f:if condition="{property.locationType}">
+								<dt>Location type</dt>
+								<dd>{property.locationType}</dd>
+							</f:if>
+							<f:if condition="{property.region}">
+								<dt>Region</dt>
+								<dd>{property.region}</dd>
+							</f:if>
+							<f:if condition="{property.country}">
+								<dt>Country</dt>
+								<dd>{property.country}</dd>
+							</f:if>
+							<f:if condition="{property.orientation}">
+								<dt>Orientation</dt>
+								<dd>{property.orientation}</dd>
+							</f:if>
+							<f:if condition="{property.view}">
+								<dt>View</dt>
+								<dd>{property.view}</dd>
+							</f:if>
+							<f:if condition="{property.hasRuralZone}">
+								<dt>Has rural zone</dt>
+								<dd>{property.hasRuralZone}</dd>
+							</f:if>
+						</dl>
 					</div>
-					<div class="tx-realer-vspace"></div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="tx-realer-propertyitem-overview-list list-group">
-								<dl class="dl-horizontal list-group-item">
-									<dt>Location type</dt>
-									<dd>{property.locationType}</dd>
-									<dt>Region</dt>
-									<dd>{property.region}</dd>
-									<dt>Country</dt>
-									<dd>{property.country}</dd>
-									<dt>Orientation</dt>
-									<dd>{property.orientation}</dd>
-									<dt>View</dt>
-									<dd>{property.view}</dd>
-									<dt>Has rural zone</dt>
-									<dd>{property.hasRuralZone}</dd>
-								</dl>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="tx-realer-propertyitem-overview-list list-group">
-								<dl class="dl-horizontal list-group-item">
-									<dt>Availability</dt>
-									<dd>For sale, rent, business transfer</dd>
+
+					<div class="tx-realer-listgroup list-group">
+						<dl class="dl-horizontal list-group-item">
+							<dt>Availability</dt>
+							<dd>For sale, rent, business transfer</dd>
+							<f:if condition="{property.price}">
+								<f:then>
 									<dt>Price</dt>
 									<dd>{property.price}</dd>
-									<dt>Insurance value</dt>
-									<dd>{property.insuranceValue}</dd>
-									<dt>Running cost</dt>
-									<dd>{property.runningCost}</dd>
-								</dl>
-							</div>
-						</div>
+								</f:then>
+								<f:else>
+									<dt>Price</dt>
+									<dd>Auf Anfrage</dd>
+								</f:else>
+							</f:if>
+							<f:if condition="{property.insuranceValue}">
+								<dt>Insurance value</dt>
+								<dd>{property.insuranceValue}</dd>
+							</f:if>
+							<f:if condition="{property.runningCost}">
+								<dt>Running cost</dt>
+								<dd>{property.runningCost}</dd>
+							</f:if>
+						</dl>
+					</div>
+
+					<div class="tx-realer-vspace visible-xs-block visible-sm-block"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="tx-realer-text">
+						<f:format.html>{property.introduction}</f:format.html>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingTwo">
-				<h4 class="panel-title">
-					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						<f:translate key="details"></f:translate>
-					</a>
-				</h4>
-			</div>
-			<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-				<div class="panel-body">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="tx-realer-propertyitem-overview-list list-group">
-								<dl class="dl-horizontal list-group-item">
-									<dt>Object type</dt>
-									<dd>{property.objectType}</dd>
-									<dt>Land type</dt>
-									<dd>{property.landType}</dd>
-									<dt>Is new</dt>
-									<dd>{property.isNew}</dd>
-									<dt>Property age</dt>
-									<dd>{property.propertyAge}</dd>
-									<dt>Land area</dt>
-									<dd>{property.landArea}</dd>
-									<dt>Classification</dt>
-									<dd>{property.classification}</dd>
-									<dt>State</dt>
-									<dd>{property.state}</dd>
-								</dl>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="tx-realer-propertyitem-overview-list list-group">
-								<dl class="dl-horizontal list-group-item">
-									<dt>Sleeping room count</dt>
-									<dd>{property.roomCount}</dd>
-									<dt>Has hall</dt>
-									<dd>{property.hasHall}</dd>
-									<dt>Has cellar</dt>
-									<dd>{property.hasCellar}</dd>
-									<dt>Has storage</dt>
-									<dd>{property.hasStorage}</dd>
-									<dt>Has balcony</dt>
-									<dd>{property.hasBalcony}</dd>
-									<dt>Has elevator</dt>
-									<dd>{property.hasElevater}</dd>
-									<dt>Has garage</dt>
-									<dd>{property.hasGarage}</dd>
-									<dt>Garage count</dt>
-									<dd>{property.garageCount}</dd>
-									<dt>Has chimney</dt>
-									<dd>{property.hasChimney}</dd>
-									<dt>Has pool</dt>
-									<dd>{property.hasPool}</dd>
-									<dt>Has barbecue</dt>
-									<dd>{property.hasBarbecue}</dd>
-								</dl>
-							</div>
-						</div>
+		<div role="tabpanel" class="tab-pane" id="details">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="tx-realer-text">
+						<f:format.html>{property.description}</f:format.html>
 					</div>
-					<div>
-						<div class="tx-realer-propertyitem-overview-text">
-							<f:format.html>{property.description}</f:format.html>
-						</div>
+				</div>
+				<div class="col-md-5">
+					<div class="tx-realer-contact panel panel-info">
+						<p class="panel-body">Für weitere Auskünfte setzen Sie Sich bitte mit uns in Verbindung.</p>
 					</div>
 				</div>
 			</div>
@@ -152,8 +117,11 @@
 
 	<div class="tx-realer-footer">
 		<f:link.action action="list">
-			<button class="btn btn-info"><f:translate key="back" /></button>
-		</f:link.action><br />
+			<button class="btn btn-bps-1">
+				<f:translate key="back"/>
+			</button>
+		</f:link.action>
+		<br/>
 	</div>
 
 </f:section>
