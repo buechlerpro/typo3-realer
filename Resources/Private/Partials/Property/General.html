@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+	<dl class="dl-horizontal list-group-item">
+		<f:if condition="{property.availableForRent} || {property.availableForSale} || {property.availableForBusinessTransfer}">
+			<dt><f:translate key="availableFor" /></dt>
+			<dd>
+				<ul class="tx-realer-availabilitylist">
+					<f:if condition="{property.availableForRent}"><li><f:translate key="availableForRent" /></li></f:if>
+					<f:if condition="{property.availableForSale}"><li><f:translate key="availableForSale" /></li></f:if>
+					<f:if condition="{property.availableForSale}"><li><f:translate key="availableForBusinessTransfer" /></li></f:if>
+				</ul>
+			</dd>
+		</f:if>
+		<f:if condition="{property.price}">
+			<f:then>
+				<dt><f:translate key="tx_realer_domain_model_property.price" /></dt>
+				<dd><f:render partial="Helper/Currency" arguments="{value: property.price}" /></dd>
+			</f:then>
+			<f:else>
+				<dt><f:translate key="tx_realer_domain_model_property.price" /></dt>
+				<dd><f:translate key="onrequest" /></dd>
+			</f:else>
+		</f:if>
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.insuranceValue,
+			translationKey:'tx_realer_domain_model_property.insurance_value',
+			type: 'CURRENCY'}" />
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.runningCost,
+			translationKey:'tx_realer_domain_model_property.running_cost',
+			type: 'CURRENCY'}" />
+	</dl>
+
+</html>

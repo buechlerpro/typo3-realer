@@ -36,58 +36,12 @@
 						</figure>
 					</f:for>
 
-					<div class="tx-realer-listgroup list-group">
-						<dl class="dl-horizontal list-group-item">
-							<f:if condition="{property.locationType}">
-								<dt>Location type</dt>
-								<dd>{property.locationType}</dd>
-							</f:if>
-							<f:if condition="{property.region}">
-								<dt>Region</dt>
-								<dd>{property.region}</dd>
-							</f:if>
-							<f:if condition="{property.country}">
-								<dt>Country</dt>
-								<dd>{property.country}</dd>
-							</f:if>
-							<f:if condition="{property.orientation}">
-								<dt>Orientation</dt>
-								<dd>{property.orientation}</dd>
-							</f:if>
-							<f:if condition="{property.view}">
-								<dt>View</dt>
-								<dd>{property.view}</dd>
-							</f:if>
-							<f:if condition="{property.hasRuralZone}">
-								<dt>Has rural zone</dt>
-								<dd>{property.hasRuralZone}</dd>
-							</f:if>
-						</dl>
+					<div class="tx-realer-listgroup tx-realer-listgroup-location list-group">
+						<f:render partial="Property/Location" arguments="{property: property}" />
 					</div>
 
-					<div class="tx-realer-listgroup list-group">
-						<dl class="dl-horizontal list-group-item">
-							<dt>Availability</dt>
-							<dd>For sale, rent, business transfer</dd>
-							<f:if condition="{property.price}">
-								<f:then>
-									<dt>Price</dt>
-									<dd>{property.price}</dd>
-								</f:then>
-								<f:else>
-									<dt>Price</dt>
-									<dd>Auf Anfrage</dd>
-								</f:else>
-							</f:if>
-							<f:if condition="{property.insuranceValue}">
-								<dt>Insurance value</dt>
-								<dd>{property.insuranceValue}</dd>
-							</f:if>
-							<f:if condition="{property.runningCost}">
-								<dt>Running cost</dt>
-								<dd>{property.runningCost}</dd>
-							</f:if>
-						</dl>
+					<div class="tx-realer-listgroup tx-realer-listgroup-general list-group">
+						<f:render partial="Property/General" arguments="{property: property}"  />
 					</div>
 
 					<div class="tx-realer-vspace visible-xs-block visible-sm-block"></div>

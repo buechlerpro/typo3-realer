@@ -153,6 +153,9 @@
 			<trans-unit id="tx_realer_domain_model_property.has_barbecue">
 				<source>Has Barbecue</source>
 			</trans-unit>
+			<trans-unit id="yes">
+				<source>Yes</source>
+			</trans-unit>
 			<trans-unit id="details">
 				<source>Details</source>
 			</trans-unit>
@@ -160,7 +163,22 @@
 				<source>Back</source>
 			</trans-unit>
 			<trans-unit id="overview">
-				<source>Übersicht</source>
+				<source>Overview</source>
+			</trans-unit>
+			<trans-unit id="onrequest">
+				<source>Upon request</source>
+			</trans-unit>
+			<trans-unit id="availableFor">
+				<source>Available for</source>
+			</trans-unit>
+			<trans-unit id="availableForRent">
+				<source>Renting</source>
+			</trans-unit>
+			<trans-unit id="availableForSale">
+				<source>Selling</source>
+			</trans-unit>
+			<trans-unit id="availableForBusinessTransfer">
+				<source>Transfering business</source>
 			</trans-unit>
 		</body>
 	</file>

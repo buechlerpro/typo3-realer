@@ -192,6 +192,9 @@
 			<trans-unit id="property.state.13">
 				<source>Restored</source>
 			</trans-unit>
+			<trans-unit id="property.location_type">
+				<source>Location Type</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+	<dl class="dl-horizontal list-group-item">
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.locationType,
+			translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.location_type',
+			type: 'INDEXED'}" />
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.region,
+			translationKey:'tx_realer_domain_model_property.region'}" />
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.country,
+			translationKey:'tx_realer_domain_model_property.country'}" />
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.orientation,
+			translationKey:'tx_realer_domain_model_property.orientation'}" />
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.view,
+			translationKey:'tx_realer_domain_model_property.view'}" />
+		<f:render partial="Property/ListItem" arguments="{
+			value: property.hasRuralZone,
+			translationKey:'tx_realer_domain_model_property.has_rural_zone',
+			type: 'YES'}" />
+	</dl>
+
+</html>
