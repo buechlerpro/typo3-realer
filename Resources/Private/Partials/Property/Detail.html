@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<dl class="dl-horizontal list-group-item">
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.roomCount,
+			translationKey:'tx_realer_domain_model_property.room_count'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.sleepingRoomCount,
+			translationKey:'tx_realer_domain_model_property.sleeping_room_count'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasHall,
+			translationKey:'tx_realer_domain_model_property.has_hall',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasCellar,
+			translationKey:'tx_realer_domain_model_property.has_cellar',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasStorage,
+			translationKey:'tx_realer_domain_model_property.has_storage',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasBalcony,
+			translationKey:'tx_realer_domain_model_property.has_balcony',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasElevator,
+			translationKey:'tx_realer_domain_model_property.has_elevator',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasGarage,
+			translationKey:'tx_realer_domain_model_property.has_garage',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.garageCount,
+			translationKey:'tx_realer_domain_model_property.garage_count'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasChimney,
+			translationKey:'tx_realer_domain_model_property.has_chimney',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasPool,
+			translationKey:'tx_realer_domain_model_property.has_pool',
+			type: 'YES'}" />
+	<f:render partial="Property/ListItem" arguments="{
+			value: property.hasBarbecue,
+			translationKey:'tx_realer_domain_model_property.has_barbecue',
+			type: 'YES'}" />
+</dl>
+
+</html>

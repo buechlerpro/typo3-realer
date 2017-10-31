@@ -69,5 +69,6 @@ plugin.tx_realer_objectlisting {
 			image.maxWidth = {$plugin.tx_realer_objectlisting.settings.image.maxWidth}
 			text.maxCharacters = {$plugin.tx_realer_objectlisting.settings.text.maxCharacters}
 			propertyCountPerPage = {$plugin.tx_realer_objectlisting.settings.propertyCountPerPage}
+			mapUri = {$plugin.tx_realer_objectlisting.settings.mapUri}
 	}
 }

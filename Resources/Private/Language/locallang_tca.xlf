@@ -12,11 +12,11 @@
 			<trans-unit id="property.tabs.basic">
 				<source>Basic</source>
 			</trans-unit>
-			<trans-unit id="property.tabs.characteristic">
-				<source>Characteristics</source>
-			</trans-unit>
 			<trans-unit id="property.tabs.detail">
 				<source>Detail</source>
+			</trans-unit>
+			<trans-unit id="property.tabs.complementary">
+				<source>Complementary</source>
 			</trans-unit>
 			<trans-unit id="property.sales_state.1">
 				<source>For sale</source>
@@ -193,7 +193,25 @@
 				<source>Restored</source>
 			</trans-unit>
 			<trans-unit id="property.location_type">
-				<source>Location Type</source>
+				<source>Location type</source>
+			</trans-unit>
+			<trans-unit id="property.object_type">
+				<source>Object type</source>
+			</trans-unit>
+			<trans-unit id="property.flat_type">
+				<source>Flat type</source>
+			</trans-unit>
+			<trans-unit id="property.house_type">
+				<source>House type</source>
+			</trans-unit>
+			<trans-unit id="property.land_type">
+				<source>Land type</source>
+			</trans-unit>
+			<trans-unit id="property.classification">
+				<source>Classification</source>
+			</trans-unit>
+			<trans-unit id="property.state">
+				<source>State</source>
 			</trans-unit>
 		</body>
 	</file>

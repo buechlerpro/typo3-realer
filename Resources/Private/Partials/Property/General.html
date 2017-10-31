@@ -4,7 +4,7 @@
 		<f:if condition="{property.availableForRent} || {property.availableForSale} || {property.availableForBusinessTransfer}">
 			<dt><f:translate key="availableFor" /></dt>
 			<dd>
-				<ul class="tx-realer-availabilitylist">
+				<ul class="tx-realer-simplelist">
 					<f:if condition="{property.availableForRent}"><li><f:translate key="availableForRent" /></li></f:if>
 					<f:if condition="{property.availableForSale}"><li><f:translate key="availableForSale" /></li></f:if>
 					<f:if condition="{property.availableForSale}"><li><f:translate key="availableForBusinessTransfer" /></li></f:if>

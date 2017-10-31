@@ -19,6 +19,12 @@
 				<dd><f:translate key="{translationKey}.{value}" /></dd>
 			</f:if>
 		</f:case>
+		<f:case value="SURFACE">
+			<f:if condition="{value}">
+				<dt><f:translate key="{translationKey}" /></dt>
+				<dd><f:render partial="Helper/Surface" arguments="{value: value}" /></dd>
+			</f:if>
+		</f:case>
 		<f:defaultCase>
 			<f:if condition="{value}">
 				<dt><f:translate key="{translationKey}" /></dt>

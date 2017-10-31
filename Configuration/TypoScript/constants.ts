@@ -44,5 +44,7 @@ plugin.tx_realer_objectlisting {
 		text.maxCharacters = 250
 		# cat=plugin.tx_realer_objectlisting/realer-210/c; type=string; label=Properties count per page
 		propertyCountPerPage = 7
+		# cat=plugin.tx_realer_objectlisting/realer-210/d; type=string; label=Map uri: Use printf format containing latitude and longitude
+        mapUri = https://www.google.com/maps/@%s,%s,14z
 	}
 }

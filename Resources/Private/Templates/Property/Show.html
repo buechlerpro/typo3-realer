@@ -55,15 +55,27 @@
 		</div>
 		<div role="tabpanel" class="tab-pane" id="details">
 			<div class="row">
-				<div class="col-md-7">
-					<div class="tx-realer-text">
-						<f:format.html>{property.description}</f:format.html>
+				<div class="col-md-6">
+					<div class="tx-realer-listgroup tx-realer-listgroup-detail list-group">
+						<f:render partial="Property/Basic" arguments="{property: property}"  />
 					</div>
 				</div>
-				<div class="col-md-5">
-					<div class="tx-realer-contact panel panel-info">
-						<p class="panel-body">Für weitere Auskünfte setzen Sie Sich bitte mit uns in Verbindung.</p>
+				<div class="col-md-6">
+					<div class="tx-realer-listgroup tx-realer-listgroup-detail list-group">
+						<f:render partial="Property/Detail" arguments="{property: property}"  />
 					</div>
+				</div>
+			</div>
+			<div class="tx-realer-text">
+				<f:format.html>{property.description}</f:format.html>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+
+				</div>
+				<div class="col-md-6">
+
 				</div>
 			</div>
 		</div>

@@ -21,6 +21,30 @@
 			value: property.hasRuralZone,
 			translationKey:'tx_realer_domain_model_property.has_rural_zone',
 			type: 'YES'}" />
+		<f:if condition="{property.address}">
+			<dt><f:translate key="tx_realer_domain_model_property.address" /></dt>
+			<dd>
+				<ul class="tx-realer-simplelist">
+					<f:if condition="{property.address}"><li>{property.address}</li></f:if>
+					<f:if condition="{property.zip} || {property.place}">
+						<li>
+							<f:if condition="{property.zip}">{property.zip} </f:if>
+							<f:if condition="{property.place}">{property.place} </f:if>
+						</li>
+					</f:if>
+					<f:if condition="{property.zone}"><li>{property.zone}</li></f:if>
+				</ul>
+			</dd>
+		</f:if>
+		<f:if condition="{property.latitude} && {property.longitude} && {settings.mapUri}">
+			<dt><f:translate key="map" /></dt>
+			<dd>
+				<f:link.external uri="{f:format.printf(arguments:
+					{0: property.latitude, 1: property.longitude}, value: settings.mapUri)}">
+					{property.latitude}/{property.longitude}
+				</f:link.external>
+			</dd>
+		</f:if>
 	</dl>
 
 </html>
