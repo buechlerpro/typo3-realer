@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-08-14T18:44:18Z" product-name="realer">
+		<header/>
+		<body>
+			<trans-unit id="tx_realer_domain_model_property">
+				<source>Property</source>
+				<target state="translated">Immobilie</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.title">
+				<source>Title</source>
+				<target state="translated">Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.agent_reference">
+				<source>Agent Reference</source>
+				<target state="translated">Agenturreferenz</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_priority">
+				<source>Has Priority</source>
+				<target state="translated">Hat Prirität</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.sales_state">
+				<source>Sales State</source>
+				<target state="translated">Verkaufsstand</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.available_for_sale">
+				<source>Available For Sale</source>
+				<target state="translated">Zum Verkauf</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.available_for_rent">
+				<source>Available For Rent</source>
+				<target state="translated">Zur Vermietung</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.available_for_business_transfer">
+				<source>Available For Business Transfer</source>
+				<target state="translated">Zur Geschäftsweitergabe</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.price_before">
+				<source>Price Before</source>
+				<target state="translated">Vorheriger Preis</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.price">
+				<source>Price</source>
+				<target state="translated">Preis</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.insurance_value">
+				<source>Insurance Value</source>
+				<target state="translated">Versicherungswert</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.running_cost">
+				<source>Running Cost</source>
+				<target state="translated">Unterhaltskosten</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.images">
+				<source>Images</source>
+				<target state="translated">Bilder</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.introduction">
+				<source>Introduction</source>
+				<target state="translated">Einleitung</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.location_type">
+				<source>Location Type</source>
+				<target state="translated">Lage</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.address">
+				<source>Address</source>
+				<target state="translated">Adresse</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.zip">
+				<source>Zip</source>
+				<target state="translated">PLZ</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.place">
+				<source>Place</source>
+				<target state="translated">Ort</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.zone">
+				<source>Zone</source>
+				<target state="translated">Zone</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.region">
+				<source>Region</source>
+				<target state="translated">Region</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.country">
+				<source>Country</source>
+				<target state="translated">Land</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.latitude">
+				<source>Latitude</source>
+				<target state="translated">Breitengrad</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.longitude">
+				<source>Longitude</source>
+				<target state="translated">Längengrad</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.orientation">
+				<source>Orientation</source>
+				<target state="translated">Ausrichtung</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.view">
+				<source>View</source>
+				<target state="translated">Aussicht</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_rural_zone">
+				<source>Has Rural Zone</source>
+				<target state="translated">Hat ländliche Umgebung</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.object_type">
+				<source>Object Type</source>
+				<target state="translated">Objektart</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.flat_type">
+				<source>Flat Type</source>
+				<target state="translated">Wohnungsart</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.house_type">
+				<source>House Type</source>
+				<target state="translated">Hausform</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.land_type">
+				<source>Land Type</source>
+				<target state="translated">Landart</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.is_new">
+				<source>Is New</source>
+				<target state="translated">Ist neu</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.property_age">
+				<source>Property Age</source>
+				<target state="translated">Immobilienalter</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.land_area">
+				<source>Land Area</source>
+				<target state="translated">Landfläche (m2)</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.construction_area">
+				<source>Construction Area</source>
+				<target state="translated">Konstruktionsfläche (m2)</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.useful_area">
+				<source>Useful Area</source>
+				<target state="translated">Nutzfläche (m2)</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.classification">
+				<source>Classification</source>
+				<target state="translated">Klassifizierung</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.state">
+				<source>State</source>
+				<target state="translated">Zustand</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.description">
+				<source>Description</source>
+				<target state="translated">Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.room_count">
+				<source>Room Count</source>
+				<target state="translated">Anzahl Zimmer</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.sleeping_room_count">
+				<source>Sleeping Room Count</source>
+				<target state="translated">Anzahl Schlafzimmer</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_hall">
+				<source>Has Hall</source>
+				<target state="translated">Hat Empfangshalle</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_cellar">
+				<source>Has Cellar</source>
+				<target state="translated">Hat Keller</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_storage">
+				<source>Has Storage</source>
+				<target state="translated">Hat Lagerraum</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_balcony">
+				<source>Has Balcony</source>
+				<target state="translated">Hat Balkon</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_elevator">
+				<source>Has Elevator</source>
+				<target state="translated">Hat Lift</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_garage">
+				<source>Has Garage</source>
+				<target state="translated">Hat Garage</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.garage_count">
+				<source>Garage Count</source>
+				<target state="translated">Anzahl Garagenplätze</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_chimney">
+				<source>Has Chimney</source>
+				<target state="translated">Hat Cheminée</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_pool">
+				<source>Has Pool</source>
+				<target state="translated">Hat Schwimmbad</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_domain_model_property.has_barbecue">
+				<source>Has Barbecue</source>
+				<target state="translated">Hat Feuerstelle</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_objectlisting.name">
+				<source>Realer - Objectlisting</source>
+				<target state="translated">Realer - Objektliste</target>
+			</trans-unit>
+			<trans-unit id="tx_realer_objectlisting.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
+

@@ -1,217 +1,287 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-27T14:41:22Z" product-name="realer">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-07-27T14:41:22Z" product-name="realer">
 		<header/>
 		<body>
 			<trans-unit id="selectBox.pleaseSelect">
 				<source>Please select</source>
+				<target state="translated">Bitte wählen</target>
 			</trans-unit>
 			<trans-unit id="property.tabs.location">
 				<source>Location</source>
+				<target state="translated">Lage</target>
 			</trans-unit>
 			<trans-unit id="property.tabs.basic">
 				<source>Basic</source>
+				<target state="translated">Basis</target>
 			</trans-unit>
 			<trans-unit id="property.tabs.detail">
 				<source>Detail</source>
+				<target state="translated">Detail</target>
 			</trans-unit>
 			<trans-unit id="property.tabs.complementary">
 				<source>Complementary</source>
+				<target state="translated">Ergänzend</target>
 			</trans-unit>
 			<trans-unit id="property.sales_state.1">
 				<source>For sale</source>
+				<target state="translated">Zum Verkauf</target>
 			</trans-unit>
 			<trans-unit id="property.sales_state.2">
 				<source>Sold</source>
+				<target state="translated">Verkauft</target>
 			</trans-unit>
 			<trans-unit id="property.location_type.1">
 				<source>Centric</source>
+				<target state="translated">Zentrisch</target>
 			</trans-unit>
 			<trans-unit id="property.location_type.2">
 				<source>Peripheric</source>
+				<target state="translated">Agglomeration</target>
 			</trans-unit>
 			<trans-unit id="property.location_type.3">
 				<source>Rural</source>
+				<target state="translated">Ländlich</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.1">
 				<source>House</source>
+				<target state="translated">Haus</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.2">
 				<source>Flat</source>
+				<target state="translated">Wohnung</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.3">
 				<source>Duplex</source>
+				<target state="translated">Duplex</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.4">
 				<source>Comercial venues</source>
+				<target state="translated">Geschäftslokal</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.5">
 				<source>Terrains/Solar</source>
+				<target state="translated">Land / Bauland</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.6">
 				<source>Singular house</source>
+				<target state="translated">Alleinstehendes Haus</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.7">
 				<source>Country house</source>
+				<target state="translated">Landhaus</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.8">
 				<source>Industrial room</source>
+				<target state="translated">Industrieraum</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.9">
 				<source>Garage</source>
+				<target state="translated">Garage</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.10">
 				<source>Office</source>
+				<target state="translated">Büro</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.11">
 				<source>Business</source>
+				<target state="translated">Geschäft</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.12">
 				<source>Bungalows</source>
+				<target state="translated">Bungalow</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.13">
 				<source>Rustic estate</source>
+				<target state="translated">Rustikales Grundstück</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.14">
 				<source>Building promotion</source>
+				<target state="translated">Baupromotion</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.15">
 				<source>Hotel</source>
+				<target state="translated">Hotel</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.16">
 				<source>Hotel/Restaurant</source>
+				<target state="translated">Hotel/Restaurant</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.17">
 				<source>Restaurant</source>
+				<target state="translated">Restaurant</target>
 			</trans-unit>
 			<trans-unit id="property.object_type.18">
 				<source>Business property</source>
+				<target state="translated">Geschäftslokal</target>
 			</trans-unit>
 			<trans-unit id="property.house_type.1">
 				<source>Rustic</source>
+				<target state="translated">Rustikal</target>
 			</trans-unit>
 			<trans-unit id="property.house_type.2">
 				<source>Row house</source>
+				<target state="translated">Reihenhaus</target>
 			</trans-unit>
 			<trans-unit id="property.house_type.3">
 				<source>Individual</source>
+				<target state="translated">Individuell</target>
 			</trans-unit>
 			<trans-unit id="property.house_type.4">
 				<source>Duplex</source>
+				<target state="translated">Doppel</target>
 			</trans-unit>
 			<trans-unit id="property.house_type.5">
 				<source>House (to reform)</source>
+				<target state="translated">Reformbedürftiges Haus</target>
 			</trans-unit>
 			<trans-unit id="property.house_type.6">
 				<source>Structure</source>
+				<target state="translated">Struktur</target>
 			</trans-unit>
 			<trans-unit id="property.house_type.7">
 				<source>Others</source>
+				<target state="translated">Anderes</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type.1">
 				<source>Flat</source>
+				<target state="translated">Wohnung</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type.2">
 				<source>Apartment</source>
+				<target state="translated">Apartement</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type.3">
 				<source>Studio</source>
+				<target state="translated">Studio</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type.4">
 				<source>Attic</source>
+				<target state="translated">Dachwohnung</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type.5">
 				<source>Mansard</source>
+				<target state="translated">Mansarde</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type.6">
 				<source>Loft</source>
+				<target state="translated">Loft</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type.7">
 				<source>Others</source>
+				<target state="translated">Anderes</target>
 			</trans-unit>
 			<trans-unit id="property.land_type.1">
 				<source>Industrial</source>
+				<target state="translated">Industriell</target>
 			</trans-unit>
 			<trans-unit id="property.land_type.2">
 				<source>Dotacional</source>
+				<target state="translated">Grundstück für öffentlichen Gebrauch</target>
 			</trans-unit>
 			<trans-unit id="property.land_type.3">
 				<source>Others</source>
+				<target state="translated">Anderes</target>
 			</trans-unit>
 			<trans-unit id="property.classification.1">
 				<source>*</source>
+				<target state="translated">*</target>
 			</trans-unit>
 			<trans-unit id="property.classification.2">
 				<source>**</source>
+				<target state="translated">**</target>
 			</trans-unit>
 			<trans-unit id="property.classification.3">
 				<source>***</source>
+				<target state="translated">***</target>
 			</trans-unit>
 			<trans-unit id="property.classification.4">
 				<source>****</source>
+				<target state="translated">****</target>
 			</trans-unit>
 			<trans-unit id="property.classification.5">
 				<source>*****</source>
+				<target state="translated">*****</target>
 			</trans-unit>
 			<trans-unit id="property.state.1">
 				<source>Extraordinary</source>
+				<target state="translated">Aussergewöhnlich</target>
 			</trans-unit>
 			<trans-unit id="property.state.2">
 				<source>Good</source>
+				<target state="translated">Gut</target>
 			</trans-unit>
 			<trans-unit id="property.state.3">
 				<source>In construction</source>
+				<target state="translated">In Konstruktion</target>
 			</trans-unit>
 			<trans-unit id="property.state.4">
 				<source>In reform</source>
+				<target state="translated">In Renovation</target>
 			</trans-unit>
 			<trans-unit id="property.state.5">
 				<source>Structure</source>
+				<target state="translated">Struktur erstellt</target>
 			</trans-unit>
 			<trans-unit id="property.state.6">
 				<source>Excelent</source>
+				<target state="translated">Exellent</target>
 			</trans-unit>
 			<trans-unit id="property.state.7">
 				<source>Bad</source>
+				<target state="translated">Schlecht</target>
 			</trans-unit>
 			<trans-unit id="property.state.8">
 				<source>Very good</source>
+				<target state="translated">Sehr gut</target>
 			</trans-unit>
 			<trans-unit id="property.state.9">
 				<source>Reform needed</source>
+				<target state="translated">Renovationsbedürftig</target>
 			</trans-unit>
 			<trans-unit id="property.state.10">
 				<source>Finish needed</source>
+				<target state="translated">Abschlussarbeiten ausstehend</target>
 			</trans-unit>
 			<trans-unit id="property.state.11">
 				<source>Normal</source>
+				<target state="translated">Normal</target>
 			</trans-unit>
 			<trans-unit id="property.state.12">
 				<source>Regular</source>
+				<target state="translated">Regulär</target>
 			</trans-unit>
 			<trans-unit id="property.state.13">
 				<source>Restored</source>
+				<target state="translated">Renoviert</target>
 			</trans-unit>
 			<trans-unit id="property.location_type">
 				<source>Location type</source>
+				<target state="translated">Lage</target>
 			</trans-unit>
 			<trans-unit id="property.object_type">
 				<source>Object type</source>
+				<target state="translated">Objektart</target>
 			</trans-unit>
 			<trans-unit id="property.flat_type">
 				<source>Flat type</source>
+				<target state="translated">Wohnungsart</target>
 			</trans-unit>
 			<trans-unit id="property.house_type">
 				<source>House type</source>
+				<target state="translated">Hausform</target>
 			</trans-unit>
 			<trans-unit id="property.land_type">
 				<source>Land type</source>
+				<target state="translated">Landart</target>
 			</trans-unit>
 			<trans-unit id="property.classification">
 				<source>Classification</source>
+				<target state="translated">Klassifikation</target>
 			</trans-unit>
 			<trans-unit id="property.state">
 				<source>State</source>
+				<target state="translated">Zustand</target>
 			</trans-unit>
 		</body>
 	</file>
