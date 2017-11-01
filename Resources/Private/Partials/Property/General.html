@@ -2,7 +2,7 @@
 
 	<dl class="dl-horizontal list-group-item">
 		<f:if condition="{property.availableForRent} || {property.availableForSale} || {property.availableForBusinessTransfer}">
-			<dt><f:translate key="availableFor" /></dt>
+			<dt title="{f:translate(key: translationKey)}"><f:translate key="availableFor" /></dt>
 			<dd>
 				<ul class="tx-realer-simplelist">
 					<f:if condition="{property.availableForRent}"><li><f:translate key="availableForRent" /></li></f:if>
@@ -13,11 +13,11 @@
 		</f:if>
 		<f:if condition="{property.price}">
 			<f:then>
-				<dt><f:translate key="tx_realer_domain_model_property.price" /></dt>
+				<dt title="{f:translate(key: translationKey)}"><f:translate key="tx_realer_domain_model_property.price" /></dt>
 				<dd><f:render partial="Helper/Currency" arguments="{value: property.price}" /></dd>
 			</f:then>
 			<f:else>
-				<dt><f:translate key="tx_realer_domain_model_property.price" /></dt>
+				<dt title="{f:translate(key: translationKey)}"><f:translate key="tx_realer_domain_model_property.price" /></dt>
 				<dd><f:translate key="onrequest" /></dd>
 			</f:else>
 		</f:if>

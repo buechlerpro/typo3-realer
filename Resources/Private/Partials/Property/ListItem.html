@@ -3,31 +3,31 @@
 	<f:switch expression="{type}">
 		<f:case value="YES">
 			<f:if condition="{value}">
-				<dt><f:translate key="{translationKey}" /></dt>
+				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:translate key="yes" /></dd>
 			</f:if>
 		</f:case>
 		<f:case value="CURRENCY">
 			<f:if condition="{value}">
-				<dt><f:translate key="{translationKey}" /></dt>
+				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:render partial="Helper/Currency" arguments="{value: value}" /></dd>
 			</f:if>
 		</f:case>
 		<f:case value="INDEXED">
 			<f:if condition="{value}">
-				<dt><f:translate key="{translationKey}" /></dt>
+				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:translate key="{translationKey}.{value}" /></dd>
 			</f:if>
 		</f:case>
 		<f:case value="SURFACE">
 			<f:if condition="{value}">
-				<dt><f:translate key="{translationKey}" /></dt>
+				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:render partial="Helper/Surface" arguments="{value: value}" /></dd>
 			</f:if>
 		</f:case>
 		<f:defaultCase>
 			<f:if condition="{value}">
-				<dt><f:translate key="{translationKey}" /></dt>
+				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd>{value}</dd>
 			</f:if>
 		</f:defaultCase>
