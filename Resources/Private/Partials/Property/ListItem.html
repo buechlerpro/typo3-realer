@@ -1,35 +1,28 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-	<f:switch expression="{type}">
-		<f:case value="YES">
-			<f:if condition="{value}">
+	<f:if condition="{value}">
+		<f:switch expression="{type}">
+			<f:case value="YES">
 				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:translate key="yes" /></dd>
-			</f:if>
-		</f:case>
-		<f:case value="CURRENCY">
-			<f:if condition="{value}">
+			</f:case>
+			<f:case value="CURRENCY">
 				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:render partial="Helper/Currency" arguments="{value: value}" /></dd>
-			</f:if>
-		</f:case>
-		<f:case value="INDEXED">
-			<f:if condition="{value}">
+			</f:case>
+			<f:case value="INDEXED">
 				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:translate key="{translationKey}.{value}" /></dd>
-			</f:if>
-		</f:case>
-		<f:case value="SURFACE">
-			<f:if condition="{value}">
+			</f:case>
+			<f:case value="SURFACE">
 				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd><f:render partial="Helper/Surface" arguments="{value: value}" /></dd>
-			</f:if>
-		</f:case>
-		<f:defaultCase>
-			<f:if condition="{value}">
+			</f:case>
+			<f:defaultCase>
 				<dt title="{f:translate(key: translationKey)}"><f:translate key="{translationKey}" /></dt>
 				<dd>{value}</dd>
-			</f:if>
-		</f:defaultCase>
-	</f:switch>
+			</f:defaultCase>
+		</f:switch>
+	</f:if>
+
 </html>
