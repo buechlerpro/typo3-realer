@@ -19,6 +19,17 @@ namespace Synac\Realer\Domain\Repository;
 class PropertyRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
 
+
+    /**
+     * default ordering
+     *
+     * @var array
+     */
+    protected $defaultOrderings = [
+        'has_priority' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+        'crdate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+    ];
+
     /**
      * Retrieves the property types having at least one property. The format is:
      * $result = [
