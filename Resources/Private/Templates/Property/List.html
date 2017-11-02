@@ -16,7 +16,7 @@
 		<div class="tx-realer-propertylistpage">
 			<f:for each="{paginatedProperties}" as="property">
 				<div class="tx-realer-propertylistitem">
-					<h4 class="tx-realer-title">{property.title}</h4>
+					<f:link.action action="show" arguments="{property : property}"><h4 class="tx-realer-title">{property.title}</h4></f:link.action>
 					<div class="row">
 						<div class="col-md-4">
 							<f:for each="{property.images}" as="image" key="key" iteration="i">
