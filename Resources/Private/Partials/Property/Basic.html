@@ -1,45 +1,52 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<dl class="dl-horizontal list-group-item">
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.flatType,
-			translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.flat_type',
-			type: 'INDEXED'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.houseType,
-			translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.house_type',
-			type: 'INDEXED'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.landType,
-			translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.land_type',
-			type: 'INDEXED'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.isNew,
-			translationKey:'tx_realer_domain_model_property.is_new',
-			type: 'YES'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.propertyAge,
-			translationKey:'tx_realer_domain_model_property.property_age'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.landArea,
-			translationKey:'tx_realer_domain_model_property.land_area',
-			type: 'SURFACE'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.constructionArea,
-			translationKey:'tx_realer_domain_model_property.construction_area',
-			type: 'SURFACE'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.usefulArea,
-			translationKey:'tx_realer_domain_model_property.useful_area',
-			type: 'SURFACE'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.classification,
-			translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.classification',
-			type: 'INDEXED'}" />
-	<f:render partial="Property/ListItem" arguments="{
-			value: property.state,
-			translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.state',
-			type: 'INDEXED'}" />
-</dl>
+<f:if condition="{property.flatType} || {property.houseType} || {property.landType} ||
+				 {property.isNew} || {property.propertyAge} || {property.landArea} ||
+				 {property.constructionArea} || {property.usefulArea} || {property.classification} ||
+				 {property.state}">
+
+	<dl class="dl-horizontal list-group-item">
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.flatType,
+				translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.flat_type',
+				type: 'INDEXED'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.houseType,
+				translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.house_type',
+				type: 'INDEXED'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.landType,
+				translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.land_type',
+				type: 'INDEXED'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.isNew,
+				translationKey:'tx_realer_domain_model_property.is_new',
+				type: 'YES'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.propertyAge,
+				translationKey:'tx_realer_domain_model_property.property_age'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.landArea,
+				translationKey:'tx_realer_domain_model_property.land_area',
+				type: 'SURFACE'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.constructionArea,
+				translationKey:'tx_realer_domain_model_property.construction_area',
+				type: 'SURFACE'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.usefulArea,
+				translationKey:'tx_realer_domain_model_property.useful_area',
+				type: 'SURFACE'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.classification,
+				translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.classification',
+				type: 'INDEXED'}" />
+		<f:render partial="Property/ListItem" arguments="{
+				value: property.state,
+				translationKey:'LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:property.state',
+				type: 'INDEXED'}" />
+	</dl>
+
+</f:if>
 
 </html>
