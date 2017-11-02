@@ -31,7 +31,7 @@ call_user_func(
     {
 
         // Static templates
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('realer', 'Configuration/TypoScript/DefaultTheme', 'Real estate publisher - Default theme');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('realer', 'Configuration/TypoScript/DefaultTheme', 'Real estate publisher - Default theme (bootstrap_package)');
 
     }
 );
