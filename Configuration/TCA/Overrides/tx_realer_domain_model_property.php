@@ -1,5 +1,7 @@
 <?php
 
+$GLOBALS['TCA']['tx_realer_domain_model_property']['ctrl']['default_sortby'] = 'has_priority DESC, crdate DESC';
+
 $GLOBALS['TCA']['tx_realer_domain_model_property']['types'] = [
     '1' => ['showitem' => '
             sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, agent_reference, has_priority, sales_state, available_for_sale, available_for_rent, available_for_business_transfer, price_before, price, insurance_value, running_cost, images, introduction, 
