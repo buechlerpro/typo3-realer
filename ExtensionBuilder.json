@@ -566,8 +566,8 @@
                     "switchableActions": ""
                 },
                 "description": "",
-                "key": "objectlisting",
-                "name": "Realer - Objectlisting"
+                "key": "propertylisting",
+                "name": "Realer - Propertylisting"
             }
         ],
         "vendorName": "Synac"

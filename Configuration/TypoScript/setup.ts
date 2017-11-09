@@ -1,15 +1,15 @@
 
-plugin.tx_realer_objectlisting {
+plugin.tx_realer_propertylisting {
     view {
         templateRootPaths.0 = EXT:realer/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_realer_objectlisting.view.templateRootPath}
+        templateRootPaths.1 = {$plugin.tx_realer_propertylisting.view.templateRootPath}
         partialRootPaths.0 = EXT:realer/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_realer_objectlisting.view.partialRootPath}
+        partialRootPaths.1 = {$plugin.tx_realer_propertylisting.view.partialRootPath}
         layoutRootPaths.0 = EXT:realer/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_realer_objectlisting.view.layoutRootPath}
+        layoutRootPaths.1 = {$plugin.tx_realer_propertylisting.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_realer_objectlisting.persistence.storagePid}
+        storagePid = {$plugin.tx_realer_propertylisting.persistence.storagePid}
         #recursive = 1
     }
     features {
@@ -28,11 +28,11 @@ plugin.tx_realer_objectlisting {
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 
 
-plugin.tx_realer_objectlisting {
+plugin.tx_realer_propertylisting {
 	settings {
-			image.maxWidth = {$plugin.tx_realer_objectlisting.settings.image.maxWidth}
-			text.maxCharacters = {$plugin.tx_realer_objectlisting.settings.text.maxCharacters}
-			propertyCountPerPage = {$plugin.tx_realer_objectlisting.settings.propertyCountPerPage}
-			mapUri = {$plugin.tx_realer_objectlisting.settings.mapUri}
+			image.maxWidth = {$plugin.tx_realer_propertylisting.settings.image.maxWidth}
+			text.maxCharacters = {$plugin.tx_realer_propertylisting.settings.text.maxCharacters}
+			propertyCountPerPage = {$plugin.tx_realer_propertylisting.settings.propertyCountPerPage}
+			mapUri = {$plugin.tx_realer_propertylisting.settings.mapUri}
 	}
 }

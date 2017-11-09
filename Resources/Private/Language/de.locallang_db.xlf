@@ -203,11 +203,11 @@
 				<source>Has Barbecue</source>
 				<target state="translated">Hat Feuerstelle</target>
 			</trans-unit>
-			<trans-unit id="tx_realer_objectlisting.name">
-				<source>Realer - Objectlisting</source>
+			<trans-unit id="tx_realer_propertylisting.name">
+				<source>Realer - Propertylisting</source>
 				<target state="translated">Realer - Objektliste</target>
 			</trans-unit>
-			<trans-unit id="tx_realer_objectlisting.description">
+			<trans-unit id="tx_realer_propertylisting.description">
 				<source></source>
 			</trans-unit>
 		</body>

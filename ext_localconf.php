@@ -6,7 +6,7 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Synac.Realer',
-            'Objectlisting',
+            'Propertylisting',
             [
                 'Property' => 'list, show'
             ],
@@ -21,13 +21,13 @@ call_user_func(
             'mod {
                 wizards.newContentElement.wizardItems.plugins {
                     elements {
-                        objectlisting {
-                            iconIdentifier = realer-plugin-objectlisting
-                            title = LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_objectlisting.name
-                            description = LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_objectlisting.description
+                        propertylisting {
+                            iconIdentifier = realer-plugin-propertylisting
+                            title = LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_propertylisting.name
+                            description = LLL:EXT:realer/Resources/Private/Language/locallang_db.xlf:tx_realer_propertylisting.description
                             tt_content_defValues {
                                 CType = list
-                                list_type = realer_objectlisting
+                                list_type = realer_propertylisting
                             }
                         }
                     }
@@ -39,7 +39,7 @@ call_user_func(
         // icons
         if (TYPO3_MODE === 'BE') {
             $icons = [
-                'realer-plugin-objectlisting' => 'realer_plugin_objectlisting.png'
+                'realer-plugin-propertylisting' => 'realer_plugin_propertylisting.png'
             ];
             $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
             foreach ($icons as $identifier => $file) {

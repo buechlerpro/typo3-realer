@@ -153,10 +153,10 @@
 			<trans-unit id="tx_realer_domain_model_property.has_barbecue">
 				<source>Has Barbecue</source>
 			</trans-unit>
-			<trans-unit id="tx_realer_objectlisting.name">
-				<source>Realer - Objectlisting</source>
+			<trans-unit id="tx_realer_propertylisting.name">
+				<source>Realer - Propertylisting</source>
 			</trans-unit>
-			<trans-unit id="tx_realer_objectlisting.description">
+			<trans-unit id="tx_realer_propertylisting.description">
 				<source></source>
 			</trans-unit>
 		</body>

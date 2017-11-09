@@ -7,8 +7,8 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Synac.Realer',
-            'Objectlisting',
-            'Realer - Objectlisting'
+            'Propertylisting',
+            'Realer - Propertylisting'
         );
 
 

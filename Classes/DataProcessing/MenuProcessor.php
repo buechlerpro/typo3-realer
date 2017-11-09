@@ -76,7 +76,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
             $items[] = [
                 'title'   => $propertyType['objectTypeText'],
                 'link'    => $uriBuilder->uriFor('list', ['objectType' => $propertyType['objectType']],
-                    'Property', 'realer', 'objectlisting'),
+                    'Property', 'realer', 'propertylisting'),
                 'target'  => null,
                 'active'  => 0,
                 'current' => 0,
