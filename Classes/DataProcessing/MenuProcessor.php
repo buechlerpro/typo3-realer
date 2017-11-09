@@ -172,7 +172,11 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
 
 
     /**
-     * Process content object data
+     * Creates or completes the menu with the property types.
+     * It is needed to configure the uid from the a page where the properties can be rendered.
+     * In case no parent page has been defined just the property type items are gathered.
+     * In case a valid parent page has been configured the property menu items are attached to the existing menu below
+     * the parent page and after the configured sibling.
      *
      * @param ContentObjectRenderer $cObj The data of the content element or page
      * @param array $contentObjectConfiguration The configuration of Content Object
@@ -185,13 +189,28 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
         $result = parent::process($cObj, $contentObjectConfiguration, $processorConfiguration, $processedData);
 
         // proceed only if configuration is complete
-        if (!isset($processorConfiguration['menuPid']) || !$processorConfiguration['menuPid']) {
+        if (!isset($processorConfiguration['menuTargetPageUid']) || !$processorConfiguration['menuTargetPageUid']) {
             return $result;
         }
 
-        // process only if there are properties assigned to an objectType
+        // proceed only if there are properties assigned to an objectType
         $propertyTypes = $this->propertyRepository->getPropertyTypes();
         if(!$propertyTypes || count($propertyTypes) == 0) {
+            return $result;
+        }
+
+        // just return property menu in case no parent page has been defined
+        if (!isset($processorConfiguration['menuPid']) || !$processorConfiguration['menuPid']) {
+            if (isset($processorConfiguration['as']) && isset($result[$processorConfiguration['as']])) {
+                $result[$processorConfiguration['as']] = $this->getPropertyItems($processorConfiguration['menuTargetPageUid']);
+            } else {
+                $result = $this->getPropertyItems($processorConfiguration['menuTargetPageUid']);
+            };
+            return $result;
+        }
+
+        // just proceed if a valid parent has been defined
+        if (!$processorConfiguration['menuPid']) {
             return $result;
         }
 
@@ -205,7 +224,6 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
         }
 
         return $result;
-
     }
 
 }
