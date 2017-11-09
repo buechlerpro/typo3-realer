@@ -1,6 +1,7 @@
 <?php
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['ctrl']['default_sortby'] = 'has_priority DESC, crdate DESC';
+$GLOBALS['TCA']['tx_realer_domain_model_property']['ctrl']['iconfile'] = 'EXT:realer/Resources/Public/Icons/realer_domain_model_property.png';
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['types'] = [
     '1' => ['showitem' => '
