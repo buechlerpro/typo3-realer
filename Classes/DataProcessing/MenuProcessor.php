@@ -16,6 +16,7 @@ namespace Synac\Realer\DataProcessing;
 
 use TYPO3\CMS\Core\SingletonInterface;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 
 /**
@@ -48,6 +49,13 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
      */
     protected $propertyRepository = null;
 
+    /**
+     * Object type specified through the url request
+     *
+     * @var int
+     */
+    private $requestedObjectType = 0;
+
     public function __construct()
     {
         parent::__construct();
@@ -56,13 +64,15 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
         $this->allowedConfigurationKeys[] = 'menuPrecedingSiblingUid';
         $objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
         $this->propertyRepository = $objectManager->get('Synac\Realer\Domain\Repository\PropertyRepository');
+        $request = GeneralUtility::_GET('tx_realer_propertylisting');
+        $this->requestedObjectType = isset($request['objectType']) ? (int)$request['objectType'] : 0;
     }
 
 
     /**
      * Create the property items to be inserted into the menu
      *
-     * @param int $menuTargetPageUid
+     * @param int $menuTargetPageUid is the uid from the page where the plugin is located
      * @return array
      */
     private function getPropertyItems(int $menuTargetPageUid)
@@ -78,8 +88,8 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
                 'link'    => $uriBuilder->uriFor('list', ['objectType' => $propertyType['objectType']],
                     'Property', 'realer', 'propertylisting'),
                 'target'  => null,
-                'active'  => 0,
-                'current' => 0,
+                'active'  => $propertyType['objectType'] == $this->requestedObjectType ? 1 : 0,
+                'current' => $propertyType['objectType'] == $this->requestedObjectType ? 1 : 0,
                 'spacer'  => 0
             ];
         };
@@ -88,15 +98,29 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
 
 
     /**
+     * Merges the property menu to the existing menu defined by the siblings.
+     *
      * @param array $siblings
-     * @param int $menuTargetPageUid
-     * @param int $menuPrecedingSiblingUid
+     * @param int $menuTargetPageUid defines the page where the plugin is located
+     * @param int $menuPrecedingSiblingUid defines the page preceding the property menu. Is optional.
+     * @return void
      */
-    private function attachPropertyItemsToSiblings(array &$siblings, int $menuTargetPageUid, int $menuPrecedingSiblingUid)
+    private function attachPropertyItemsToSiblings(array &$siblings, int $menuTargetPageUid, int $menuPrecedingSiblingUid = 0)
     {
+        // unset state from sibling
+        if ($this->requestedObjectType) {
+            foreach ($siblings as &$sibling) {
+                $sibling['active'] = 0;
+                $sibling['current'] = 0;
+            }
+        };
+
+        // init variables
         $oldSiblings = $siblings;
         $siblings = [];
         $siblingsInserted = false;
+
+        // try to insert property menu after preceding menu item
         foreach ($oldSiblings as $sibling) {
             $siblings[] = $sibling;
             if (isset($sibling['data']['uid']) && $sibling['data']['uid'] == $menuPrecedingSiblingUid) {
@@ -104,6 +128,8 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
                 $siblingsInserted = true;
             }
         }
+
+        // in case no preceding sibling was found the property menu is attached to the last sibling
         if (!$siblingsInserted) {
             $siblings = array_merge($siblings,$this->getPropertyItems($menuTargetPageUid));
         }
@@ -111,16 +137,16 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
 
 
     /**
+     * Attaches the property menu items to the existing menu.
      *
-     *
-     * @param array $items
-     * @param int $menuTargetPageUid
-     * @param int $menuPid
-     * @param int $menuSiblingUid
+     * @param array $items represents the existing menu
+     * @param int $menuTargetPageUid defines the page where the plugin is located
+     * @param int $menuPid defines the parent page from the menu items
+     * @param int $menuPrecedingSiblingUid defines the page preceding the property menu. Is optional.
      * @return void
      *
      */
-    private function attachPropertyItems(array &$items, int $menuTargetPageUid, int $menuPid, int $menuPrecedingSiblingUid)
+    private function attachPropertyItems(array &$items, int $menuTargetPageUid, int $menuPid, int $menuPrecedingSiblingUid = 0)
     {
         if (count($items)) {
             // try to find a parent
@@ -131,6 +157,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
                         $item['children'] = [];
                     };
                     $this->attachPropertyItemsToSiblings($item['children'],$menuTargetPageUid,$menuPrecedingSiblingUid);
+                    $item['current'] = 0;
                 } elseif (isset($item['children'])) {
                     // no parent found yet -> recursively check if parent is in subitems
                     $this->attachPropertyItems($item['children'],$menuTargetPageUid,$menuPid,$menuPrecedingSiblingUid);
@@ -159,6 +186,12 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
 
         // proceed only if configuration is complete
         if (!isset($processorConfiguration['menuPid']) || !$processorConfiguration['menuPid']) {
+            return $result;
+        }
+
+        // process only if there are properties assigned to an objectType
+        $propertyTypes = $this->propertyRepository->getPropertyTypes();
+        if(!$propertyTypes || count($propertyTypes) == 0) {
             return $result;
         }
 
