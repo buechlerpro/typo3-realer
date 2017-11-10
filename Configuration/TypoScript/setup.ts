@@ -30,9 +30,9 @@ plugin.tx_realer_propertylisting {
 
 plugin.tx_realer_propertylisting {
 	settings {
-			image.maxWidth = {$plugin.tx_realer_propertylisting.settings.image.maxWidth}
-			text.maxCharacters = {$plugin.tx_realer_propertylisting.settings.text.maxCharacters}
-			propertyCountPerPage = {$plugin.tx_realer_propertylisting.settings.propertyCountPerPage}
-			mapUri = {$plugin.tx_realer_propertylisting.settings.mapUri}
+		image.maxWidth = {$plugin.tx_realer_propertylisting.settings.image.maxWidth}
+		text.maxCharacters = {$plugin.tx_realer_propertylisting.settings.text.maxCharacters}
+		propertyCountPerPage = {$plugin.tx_realer_propertylisting.settings.propertyCountPerPage}
+		mapUri = {$plugin.tx_realer_propertylisting.settings.mapUri}
 	}
 }

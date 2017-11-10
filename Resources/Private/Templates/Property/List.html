@@ -24,9 +24,9 @@
 									<figure class="image">
 										<img class="lazyload tx-realer-image"
 											 src="EXT:realer/Resources/Public/Images/blank.png"
-											 data-src="{f:uri.image(src: image.uid, treatIdAsReference: 1)}"
+											 data-src="{f:uri.image(src: image.uid, width: settings.image.maxWidth, treatIdAsReference: 1)}"
 											 alt="{image.originalResource.originalFile.alternative}"
-											 title="{image.originalResource.title}"/>
+											 title="{image.originalResource.title}" />
 										<noscript>
 											<f:image class="tx-realer-image"
 													 src="{image.uid}"

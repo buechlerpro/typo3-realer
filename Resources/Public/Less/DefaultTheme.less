@@ -1,4 +1,6 @@
 @realer-block-border: @gray-light 1px solid;
+@realer-block-border-light: @gray-lighter 1px solid;
+@realer-brand-primary: @brand-primary;
 
 .tx-realer-vspace {
   overflow: hidden;
@@ -22,11 +24,11 @@
   li {
 	display: inline-block;
 	margin-left: -1px;
-	border: @gray-lighter 1px solid;
+	border: @realer-block-border-light;
 	line-height: 2.3;
 	&.current {
 	  padding: 0 0.7rem;
-	  background: @brand-primary;
+	  background: @realer-brand-primary;
 	  color: white;
 	}
 	& a {
