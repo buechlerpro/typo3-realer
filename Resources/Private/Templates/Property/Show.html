@@ -61,7 +61,7 @@
 		<div role="tabpanel" class="tab-pane" id="details">
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="tx-realer-listgroup tx-realer-listgroup-detail list-group">
+					<div class="tx-realer-listgroup tx-realer-listgroup-basic list-group">
 						<f:render partial="Property/Basic" arguments="{property: property}"  />
 					</div>
 				</div>
@@ -71,8 +71,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="tx-realer-text">
-				<f:format.html>{property.description}</f:format.html>
+			<div class="tx-realer-listgroup tx-realer-listgroup-description list-group">
+				<div class="tx-realer-text list-group-item">
+					<f:format.html>{property.description}</f:format.html>
+				</div>
 			</div>
 		</div>
 	</div>
