@@ -209,7 +209,7 @@
 			</trans-unit>
 			<trans-unit id="details">
 				<source>Details</source>
-				<target state="translated">Detailes</target>
+				<target state="translated">Details</target>
 			</trans-unit>
 			<trans-unit id="back">
 				<source>Back</source>
