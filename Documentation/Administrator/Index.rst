@@ -111,7 +111,7 @@ existing menu.
          10 = EXT:realer/Resources/Private/Templates
       }
       dataProcessing {
-         10 = Synac\Realer\DataProcessing\MenuProcessor
+         10 = Buepro\Realer\DataProcessing\MenuProcessor
          10 {
             as = propertyMenu
             menuTargetPageUid = 66
@@ -142,13 +142,13 @@ A possible fluid template could look as following:
    page {
       10.dataProcessing {
          # mainnavigation
-         10 = Synac\Realer\DataProcessing\MenuProcessor
+         10 = Buepro\Realer\DataProcessing\MenuProcessor
          10 {
             menuTargetPageUid = 66
             menuPid = 66
          }
          # subnavigation
-         20 = Synac\Realer\DataProcessing\MenuProcessor
+         20 = Buepro\Realer\DataProcessing\MenuProcessor
          20 {
             menuTargetPageUid = 66
             menuPid = 66

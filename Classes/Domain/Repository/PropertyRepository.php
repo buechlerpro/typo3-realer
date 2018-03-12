@@ -1,6 +1,6 @@
 <?php
 
-namespace Synac\Realer\Domain\Repository;
+namespace Buepro\Realer\Domain\Repository;
 
 /***
  *
@@ -9,7 +9,7 @@ namespace Synac\Realer\Domain\Repository;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Roman Büchler <rb@synac.com>, Synac Technology, S.L.
+ *  (c) 2017 Roman Büchler <rb@buechler.pro>
  *
  ***/
 

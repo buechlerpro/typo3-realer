@@ -1,5 +1,5 @@
 <?php
-namespace Synac\Realer\Service;
+namespace Buepro\Realer\Service;
 
 /***
  *
@@ -8,7 +8,7 @@ namespace Synac\Realer\Service;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Roman Büchler <rb@synac.com>, Synac Technology, S.L.
+ *  (c) 2017 Roman Büchler <rb@buechler.pro>
  *
  ***/
 
@@ -22,7 +22,7 @@ class GeneralService implements SingletonInterface
 
     static function getService()
     {
-        return \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Synac\Realer\Servic\GeneralService');
+        return \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Buepro\Realer\Servic\GeneralService');
     }
 
 

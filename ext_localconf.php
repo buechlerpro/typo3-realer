@@ -5,7 +5,7 @@ call_user_func(
     function () {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Synac.Realer',
+            'Buepro.Realer',
             'Propertylisting',
             [
                 'Property' => 'list, show'

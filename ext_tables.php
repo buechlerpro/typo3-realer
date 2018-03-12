@@ -6,7 +6,7 @@ call_user_func(
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Synac.Realer',
+            'Buepro.Realer',
             'Propertylisting',
             'Realer - Propertylisting'
         );

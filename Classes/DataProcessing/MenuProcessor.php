@@ -1,6 +1,6 @@
 <?php
 
-namespace Synac\Realer\DataProcessing;
+namespace Buepro\Realer\DataProcessing;
 
 /***
  *
@@ -9,7 +9,7 @@ namespace Synac\Realer\DataProcessing;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Roman Büchler <rb@synac.com>, Synac Technology, S.L.
+ *  (c) 2017 Roman Büchler <rb@buechler.pro>
  *
  ***/
 
@@ -27,7 +27,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  *  10 = FLUIDTEMPLATE
  *  10 {
  *     ...
- *     dataProcessing.10 = Synac\Realer\DataProcessing\MenuProcessor
+ *     dataProcessing.10 = Buepro\Realer\DataProcessing\MenuProcessor
  *     dataProcessing.10 {
  *        menuTargetPageUid = 73
  *        menuPid = 73
@@ -36,7 +36,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  *     ...
  * }
  *
- * @package Synac\Realer\DataProcessing
+ * @package Buepro\Realer\DataProcessing
  */
 class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor implements SingletonInterface
 {
@@ -44,7 +44,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
     /**
      * propertyRepository
      *
-     * @var \Synac\Realer\Domain\Repository\PropertyRepository
+     * @var \Buepro\Realer\Domain\Repository\PropertyRepository
      *
      */
     protected $propertyRepository = null;
@@ -63,7 +63,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
         $this->allowedConfigurationKeys[] = 'menuPid';
         $this->allowedConfigurationKeys[] = 'menuPrecedingSiblingUid';
         $objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
-        $this->propertyRepository = $objectManager->get('Synac\Realer\Domain\Repository\PropertyRepository');
+        $this->propertyRepository = $objectManager->get('Buepro\Realer\Domain\Repository\PropertyRepository');
         $request = GeneralUtility::_GET('tx_realer_propertylisting');
         $this->requestedObjectType = isset($request['objectType']) ? (int)$request['objectType'] : 0;
     }

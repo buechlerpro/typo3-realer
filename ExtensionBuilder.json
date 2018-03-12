@@ -549,11 +549,11 @@
         "extensionKey": "realer",
         "name": "Real estate publisher",
         "originalExtensionKey": "realer",
-        "originalVendorName": "Synac",
+        "originalVendorName": "Buepro",
         "persons": [
             {
-                "company": "Synac Technology, S.L.",
-                "email": "rb@synac.com",
+                "company": "buechler.pro",
+                "email": "rb@buechler.pro",
                 "name": "Roman B\u00fcchler",
                 "role": "Developer"
             }
@@ -570,7 +570,7 @@
                 "name": "Realer - Propertylisting"
             }
         ],
-        "vendorName": "Synac"
+        "vendorName": "Buepro"
     },
     "wires": [],
     "log": {

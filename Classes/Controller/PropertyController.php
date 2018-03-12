@@ -1,5 +1,5 @@
 <?php
-namespace Synac\Realer\Controller;
+namespace Buepro\Realer\Controller;
 
 /***
  *
@@ -8,7 +8,7 @@ namespace Synac\Realer\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Roman Büchler <rb@synac.com>, Synac Technology, S.L.
+ *  (c) 2017 Roman Büchler <rb@buechler.pro>
  *
  ***/
 
@@ -20,7 +20,7 @@ class PropertyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     /**
      * propertyRepository
      * 
-     * @var \Synac\Realer\Domain\Repository\PropertyRepository
+     * @var \Buepro\Realer\Domain\Repository\PropertyRepository
      * @inject
      */
     protected $propertyRepository = null;
@@ -46,10 +46,10 @@ class PropertyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     /**
      * action show
      * 
-     * @param \Synac\Realer\Domain\Model\Property $property
+     * @param \Buepro\Realer\Domain\Model\Property $property
      * @return void
      */
-    public function showAction(\Synac\Realer\Domain\Model\Property $property)
+    public function showAction(\Buepro\Realer\Domain\Model\Property $property)
     {
         $this->view->assign('property', $property);
     }
