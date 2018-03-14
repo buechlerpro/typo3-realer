@@ -45,9 +45,15 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
      * propertyRepository
      *
      * @var \Buepro\Realer\Domain\Repository\PropertyRepository
-     *
      */
     protected $propertyRepository = null;
+
+    /**
+     * uriBuilder
+     *
+     * @var \TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder
+     */
+    protected $uriBuilder = null;
 
     /**
      * Object type specified through the url request
@@ -59,11 +65,23 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
     public function __construct()
     {
         parent::__construct();
+
         $this->allowedConfigurationKeys[] = 'menuTargetPageUid';
         $this->allowedConfigurationKeys[] = 'menuPid';
         $this->allowedConfigurationKeys[] = 'menuPrecedingSiblingUid';
+
+        // get property repository
         $objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
         $this->propertyRepository = $objectManager->get('Buepro\Realer\Domain\Repository\PropertyRepository');
+
+        // create uriBuiler
+        $configurationManager = $objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
+        $contentObjectRenderer = $objectManager->get('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
+        $configurationManager->setContentObject($contentObjectRenderer);
+        $this->uriBuilder = $objectManager->get('TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder');
+        $this->uriBuilder->injectConfigurationManager($configurationManager);
+
+        // set user requested object type
         $request = GeneralUtility::_GET('tx_realer_propertylisting');
         $this->requestedObjectType = isset($request['objectType']) ? (int)$request['objectType'] : 0;
     }
@@ -79,13 +97,11 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
     {
         $items = [];
         $propertyTypes = $this->propertyRepository->getPropertyTypes();
-        $objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\ObjectManager::class);
-        $uriBuilder = $objectManager->get(\TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder::class);
-        if ($menuTargetPageUid) $uriBuilder->setTargetPageUid($menuTargetPageUid);
+        if ($menuTargetPageUid) $this->uriBuilder->setTargetPageUid($menuTargetPageUid);
         foreach ($propertyTypes as $propertyType) {
             $items[] = [
                 'title'   => $propertyType['objectTypeText'],
-                'link'    => $uriBuilder->uriFor('list', ['objectType' => $propertyType['objectType']],
+                'link'    => $this->uriBuilder->uriFor('list', ['objectType' => $propertyType['objectType']],
                     'Property', 'realer', 'propertylisting'),
                 'target'  => null,
                 'active'  => $propertyType['objectType'] == $this->requestedObjectType ? 1 : 0,
@@ -186,6 +202,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
      */
     public function process(ContentObjectRenderer $cObj,array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
     {
+        $this->contentObject = $cObj;
         $result = parent::process($cObj, $contentObjectConfiguration, $processorConfiguration, $processedData);
 
         // proceed only if configuration is complete
