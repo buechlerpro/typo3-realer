@@ -1,7 +1,14 @@
 <?php
 
+/*
+ * This file is part of the package Buepro/Realer.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 $GLOBALS['TCA']['tx_realer_domain_model_property']['ctrl']['default_sortby'] = 'has_priority DESC, crdate DESC';
-$GLOBALS['TCA']['tx_realer_domain_model_property']['ctrl']['iconfile'] = 'EXT:realer/Resources/Public/Icons/realer_domain_model_property.png';
+$GLOBALS['TCA']['tx_realer_domain_model_property']['ctrl']['iconfile'] = 'EXT:realer/Resources/Public/Icons/realer_domain_model_property.svg';
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['types'] = [
     '1' => ['showitem' => '
@@ -13,7 +20,6 @@ $GLOBALS['TCA']['tx_realer_domain_model_property']['types'] = [
             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'
         ]
 ];
-
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['columns']['sales_state']['config']['items'] = [
     ['LLL:EXT:realer/Resources/Private/Language/locallang_tca.xlf:selectBox.pleaseSelect', 0],
@@ -147,6 +153,5 @@ $GLOBALS['TCA']['tx_realer_domain_model_property']['columns']['images']['config'
     ],
     $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 );
-
 
 $GLOBALS['TCA']['tx_realer_domain_model_property']['columns']['view']['config']['rows'] = 4;

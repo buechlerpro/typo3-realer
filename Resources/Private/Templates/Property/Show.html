@@ -12,28 +12,33 @@
 	<h1 class="tx-realer-title">{property.title}</h1>
 
 	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab"
-												  data-toggle="tab">
-			<f:translate key="overview"></f:translate>
-		</a></li>
-		<li role="presentation"><a href="#details" aria-controls="details" role="tab" data-toggle="tab">
-			<f:translate key="details"></f:translate>
-		</a></li>
+		<li class="nav-item" role="presentation">
+			<a id="overview-tab" class="nav-link active" href="#overview" data-toggle="tab" aria-controls="overview" aria-selected="true" role="tab">
+				<f:translate key="overview"></f:translate>
+			</a>
+		</li>
+		<li class="nav-item" role="presentation">
+			<a id="detail-tab" class="nav-link" href="#details" data-toggle="tab" aria-controls="details" aria-selected="false" role="tab">
+				<f:translate key="details"></f:translate>
+			</a>
+		</li>
 	</ul>
 
 	<div class="tab-content">
-		<div role="tabpanel" class="tab-pane active" id="overview">
+		<div id="overview" class="tab-pane fade show active" role="tabpanel" aria-labelledby="overview-tab">
 			<div class="row">
 				<div class="col-md-6">
 					<f:for each="{property.images}" as="image" key="key" iteration="i">
-						<figure class="image">
-							<f:image class="tx-realer-image"
-									 src="{image.uid}"
-									 alt="{image.originalResource.originalFile.alternative}"
-									 title="{image.originalResource.title}"
-									 maxWidth="{settings.image.maxWidth}"
-									 treatIdAsReference="1"></f:image>
-						</figure>
+						<f:if condition="{i.isFirst}">
+							<figure class="image">
+								<f:image class="tx-realer-image"
+										 src="{image.uid}"
+										 alt="{image.originalResource.originalFile.alternative}"
+										 title="{image.originalResource.title}"
+										 maxWidth="{settings.image.maxWidth}"
+										 treatIdAsReference="1"></f:image>
+							</figure>
+						</f:if>
 					</f:for>
 
 					<div class="row">
@@ -51,14 +56,14 @@
 
 					<div class="tx-realer-vspace visible-xs-block visible-sm-block"></div>
 				</div>
-				<div class="col-md-6">
-					<div class="tx-realer-text">
+				<div class="col-md-6 list-group">
+					<div class="tx-realer-text list-group-item">
 						<f:format.html>{property.introduction}</f:format.html>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div role="tabpanel" class="tab-pane" id="details">
+		<div id="details" class="tab-pane fade" role="tabpanel" aria-labelledby="detail-tab">
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="tx-realer-listgroup tx-realer-listgroup-basic list-group">
@@ -71,17 +76,36 @@
 					</div>
 				</div>
 			</div>
-			<div class="tx-realer-listgroup tx-realer-listgroup-description list-group">
+			<div class="my-4 tx-realer-listgroup tx-realer-listgroup-description list-group">
 				<div class="tx-realer-text list-group-item">
 					<f:format.html>{property.description}</f:format.html>
 				</div>
 			</div>
+			<f:if condition="{f:count(subject: property.images)} > 1">
+				<div class="tx-realer-gallery row my-5">
+					<f:for each="{property.images}" as="image" key="key" iteration="i">
+						<f:if condition="{i.isFirst} == false">
+							<div class="col-12 col-md-6">
+								<figure class="image">
+									<f:image class="tx-realer-image"
+											 src="{image.uid}"
+											 alt="{image.originalResource.originalFile.alternative}"
+											 title="{image.originalResource.title}"
+											 maxWidth="{settings.image.maxWidth}"
+											 treatIdAsReference="1"></f:image>
+								</figure>
+							</div>
+						</f:if>
+
+					</f:for>
+				</div>
+			</f:if>
 		</div>
 	</div>
 
 	<div class="tx-realer-footer">
 		<f:link.action action="list">
-			<button class="btn btn-bps-1">
+			<button class="btn btn-primary btn-bps-1">
 				<f:translate key="back"/>
 			</button>
 		</f:link.action>

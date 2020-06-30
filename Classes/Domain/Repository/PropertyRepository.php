@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the package Buepro/Realer.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Buepro\Realer\Domain\Repository;
 
 /***
@@ -18,8 +25,6 @@ namespace Buepro\Realer\Domain\Repository;
  */
 class PropertyRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-
-
     /**
      * default ordering
      *
@@ -51,5 +56,4 @@ class PropertyRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         }
         return $result;
     }
-
 }

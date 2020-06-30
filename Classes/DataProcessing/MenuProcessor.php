@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the package Buepro/Realer.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Buepro\Realer\DataProcessing;
 
 /***
@@ -13,11 +20,9 @@ namespace Buepro\Realer\DataProcessing;
  *
  ***/
 
-
 use TYPO3\CMS\Core\SingletonInterface;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 /**
  * Class MenuProcessor
@@ -36,7 +41,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  *     ...
  * }
  *
- * @package Buepro\Realer\DataProcessing
  */
 class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor implements SingletonInterface
 {
@@ -86,7 +90,6 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
         $this->requestedObjectType = isset($request['objectType']) ? (int)$request['objectType'] : 0;
     }
 
-
     /**
      * Create the property items to be inserted into the menu
      *
@@ -97,21 +100,27 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
     {
         $items = [];
         $propertyTypes = $this->propertyRepository->getPropertyTypes();
-        if ($menuTargetPageUid) $this->uriBuilder->setTargetPageUid($menuTargetPageUid);
+        if ($menuTargetPageUid) {
+            $this->uriBuilder->setTargetPageUid($menuTargetPageUid);
+        }
         foreach ($propertyTypes as $propertyType) {
             $items[] = [
                 'title'   => $propertyType['objectTypeText'],
-                'link'    => $this->uriBuilder->uriFor('list', ['objectType' => $propertyType['objectType']],
-                    'Property', 'realer', 'propertylisting'),
+                'link'    => $this->uriBuilder->uriFor(
+                    'list',
+                    ['objectType' => $propertyType['objectType']],
+                    'Property',
+                    'realer',
+                    'propertylisting'
+                ),
                 'target'  => null,
                 'active'  => $propertyType['objectType'] == $this->requestedObjectType ? 1 : 0,
                 'current' => $propertyType['objectType'] == $this->requestedObjectType ? 1 : 0,
                 'spacer'  => 0
             ];
-        };
+        }
         return $items;
     }
-
 
     /**
      * Merges the property menu to the existing menu defined by the siblings.
@@ -129,7 +138,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
                 $sibling['active'] = 0;
                 $sibling['current'] = 0;
             }
-        };
+        }
 
         // init variables
         $oldSiblings = $siblings;
@@ -140,17 +149,16 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
         foreach ($oldSiblings as $sibling) {
             $siblings[] = $sibling;
             if (isset($sibling['data']['uid']) && $sibling['data']['uid'] == $menuPrecedingSiblingUid) {
-                $siblings = array_merge($siblings,$this->getPropertyItems($menuTargetPageUid));
+                $siblings = array_merge($siblings, $this->getPropertyItems($menuTargetPageUid));
                 $siblingsInserted = true;
             }
         }
 
         // in case no preceding sibling was found the property menu is attached to the last sibling
         if (!$siblingsInserted) {
-            $siblings = array_merge($siblings,$this->getPropertyItems($menuTargetPageUid));
+            $siblings = array_merge($siblings, $this->getPropertyItems($menuTargetPageUid));
         }
     }
-
 
     /**
      * Attaches the property menu items to the existing menu.
@@ -171,21 +179,20 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
                     // parent found -> attach items after sibling
                     if (!isset($item['children'])) {
                         $item['children'] = [];
-                    };
-                    $this->attachPropertyItemsToSiblings($item['children'],$menuTargetPageUid,$menuPrecedingSiblingUid);
+                    }
+                    $this->attachPropertyItemsToSiblings($item['children'], $menuTargetPageUid, $menuPrecedingSiblingUid);
                     $item['current'] = 0;
                 } elseif (isset($item['children'])) {
                     // no parent found yet -> recursively check if parent is in subitems
-                    $this->attachPropertyItems($item['children'],$menuTargetPageUid,$menuPid,$menuPrecedingSiblingUid);
+                    $this->attachPropertyItems($item['children'], $menuTargetPageUid, $menuPid, $menuPrecedingSiblingUid);
                 }
             }
             // items might contain siblings
             if (isset($items[0]['data']['pid']) && $items[0]['data']['pid'] == $menuPid) {
-                $this->attachPropertyItemsToSiblings($items,$menuTargetPageUid,$menuPrecedingSiblingUid);
+                $this->attachPropertyItemsToSiblings($items, $menuTargetPageUid, $menuPrecedingSiblingUid);
             }
         }
     }
-
 
     /**
      * Creates or completes the menu with the property types.
@@ -200,7 +207,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
      * @param array $processedData Key/value store of processed data (e.g. to be passed to a Fluid View)
      * @return array the processed data as key/value store
      */
-    public function process(ContentObjectRenderer $cObj,array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
+    public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
     {
         $this->contentObject = $cObj;
         $result = parent::process($cObj, $contentObjectConfiguration, $processorConfiguration, $processedData);
@@ -212,7 +219,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
 
         // proceed only if there are properties assigned to an objectType
         $propertyTypes = $this->propertyRepository->getPropertyTypes();
-        if(!$propertyTypes || count($propertyTypes) == 0) {
+        if (!$propertyTypes || count($propertyTypes) == 0) {
             return $result;
         }
 
@@ -222,7 +229,7 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
                 $result[$processorConfiguration['as']] = $this->getPropertyItems($processorConfiguration['menuTargetPageUid']);
             } else {
                 $result = $this->getPropertyItems($processorConfiguration['menuTargetPageUid']);
-            };
+            }
             return $result;
         }
 
@@ -237,11 +244,9 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor imp
             $menuTargetPageUid = isset($processorConfiguration['menuTargetPageUid']) ? intval($processorConfiguration['menuTargetPageUid']) : 0;
             $menuPid = intval($processorConfiguration['menuPid']);
             $menuPrecedingSiblingUid = isset($processorConfiguration['menuPrecedingSiblingUid']) ? intval($processorConfiguration['menuPrecedingSiblingUid']) : 0;
-            $this->attachPropertyItems($menuItems,$menuTargetPageUid,$menuPid,$menuPrecedingSiblingUid);
+            $this->attachPropertyItems($menuItems, $menuTargetPageUid, $menuPid, $menuPrecedingSiblingUid);
         }
 
         return $result;
     }
-
 }
-

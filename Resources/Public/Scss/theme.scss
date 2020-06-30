@@ -1,0 +1,57 @@
+$realer-block-border: #888 1px solid;
+$realer-block-border-light: #ddd 1px solid;
+$realer-brand-primary: $primary;
+
+.tx-realer-vspace {
+  overflow: hidden;
+  height: 1.6rem;
+}
+
+.tx-realer-title {
+  margin-bottom: 1em;
+}
+
+.tx-realer-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: $realer-block-border;
+}
+
+.tx-realer ul.f3-widget-paginator {
+  list-style-type: none;
+  margin: 0 0 0 1px;
+  padding: 0;
+  li {
+	display: inline-block;
+	margin-left: -1px;
+	border: $realer-block-border-light;
+	line-height: 2.3;
+	&.current {
+	  padding: 0 0.7rem;
+	  background: $realer-brand-primary;
+	  color: white;
+	}
+	& a {
+	  padding: 0 0.7rem;
+	  display: inline-block;
+	}
+  }
+}
+
+.tx-realer-propertylistpage {
+  padding: 2rem 0;
+}
+
+.tx-realer-propertylistitem {
+  &:nth-last-child(n+2) {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: $realer-block-border;
+  }
+}
+
+.tx-realer-simplelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

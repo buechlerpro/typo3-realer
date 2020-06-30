@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the package Buepro/Realer.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Buepro\Realer\Domain\Model;
 
 /***
@@ -99,8 +106,8 @@ class Property extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * images
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
-     * @lazy
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $images = null;
 

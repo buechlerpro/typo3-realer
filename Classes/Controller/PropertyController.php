@@ -1,16 +1,15 @@
 <?php
-namespace Buepro\Realer\Controller;
 
-/***
- *
- * This file is part of the "Real estate publisher" Extension for TYPO3 CMS.
+/*
+ * This file is part of the package Buepro/Realer.
  *
  * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- *  (c) 2017 Roman Büchler <rb@buechler.pro>
- *
- ***/
+ * LICENSE file that was distributed with this source code.
+ */
+
+namespace Buepro\Realer\Controller;
+
+use Buepro\Realer\Domain\Repository\PropertyRepository;
 
 /**
  * PropertyController
@@ -19,11 +18,18 @@ class PropertyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 {
     /**
      * propertyRepository
-     * 
-     * @var \Buepro\Realer\Domain\Repository\PropertyRepository
-     * @inject
+     *
+     * @var PropertyRepository
      */
     protected $propertyRepository = null;
+
+    /**
+     * @param PropertyRepository $propertyRepository
+     */
+    public function injectPropertyRepository(PropertyRepository $propertyRepository)
+    {
+        $this->propertyRepository = $propertyRepository;
+    }
 
     /**
      * action list
@@ -36,7 +42,7 @@ class PropertyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $objects = $this->propertyRepository->findAll();
         } else {
             $objects = $this->propertyRepository->findByObjectType($this->request->getArgument('objectType'));
-        };
+        }
         $this->view->assignMultiple([
             'properties' => $objects,
             'settings' => $this->settings
@@ -45,7 +51,7 @@ class PropertyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     /**
      * action show
-     * 
+     *
      * @param \Buepro\Realer\Domain\Model\Property $property
      * @return void
      */

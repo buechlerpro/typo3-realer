@@ -9,7 +9,7 @@ defined fields will as well be shown on the web site.
 By help of the provided menu processor the object navigation might be smoothly
 integrated into the site's menu.
 
-A default theme for bottstrap 3 based web sites is included. For other sites
+A default theme for bottstrap 4 based web sites is included. For other sites
 a style definition needs to be provided.
 
-Further information can be found through the [TYPO3 extension repository](https://extensions.typo3.org/)
+Further information can be found through the [TYPO3 extension repository](https://extensions.typo3.org/extension/realer)
