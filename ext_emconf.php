@@ -9,7 +9,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Real estate publisher',
-    'description' => 'Provides information regarding real estate properties',
+    'description' => 'Provides information regarding real estate properties.',
     'category' => 'plugin',
     'author' => 'Roman Büchler',
     'author_email' => 'rb@buechler.pro',
